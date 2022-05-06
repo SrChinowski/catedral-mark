@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from 'react';
+import { ThemeProvider } from 'styled-components';
+import ResetCSS from './assets/css/style';
+import GlobalStyle, { AppWrapper } from './components/containers/containers';
+import { theme } from './utils/constants/common';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Fragment>
+        <ResetCSS />
+        <GlobalStyle />
+        {/* end of global and reset style */}
+
+        {/* start app creative landing */}
+        <AppWrapper>
+          <Sticky top={0} innerZ={9999} activeClass="sticky-active">
+            <Navbar />
+          </Sticky>
+          <ContentWrapper>
+            <Banner />
+            <KeyFeatures />
+            <ChooseUs />
+            <Experiences />
+            <FeatureSlider />
+            <Pricing />
+            <Testimonials />
+            <AvailableStore />
+            <Faqs />
+            <CallToAction />
+          </ContentWrapper>
+          <Footer />
+        </AppWrapper>
+        {/* end of app creative landing */}
+      </Fragment>
+    </ThemeProvider>
   );
 }
 
