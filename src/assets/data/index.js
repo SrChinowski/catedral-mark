@@ -1,7 +1,65 @@
 /* ------------------------------------ */
 // Navbar data section
 /* ------------------------------------ */
-import logo from '../../assets/image/appCreative/logo.png';
+import logo from '../images/logo.png';
+/* ------------------------------------ */
+// Key Features data section
+/* ------------------------------------ */
+import keyFeature1 from '../images/key_feature/1.svg';
+import keyFeature2 from '../images/key_feature/2.svg';
+import keyFeature3 from '../images/key_feature/3.svg';
+import keyFeature4 from '../images/key_feature/4.svg';
+/* ------------------------------------ */
+// Choose us data section
+/* ------------------------------------ */
+import chooseThumb from '../images/chooseThumb.png';
+/* ------------------------------------ */
+// Experience data section
+/* ------------------------------------ */
+import expIcon1 from '../images/experience/1.png';
+import expIcon2 from '../images/experience/2.png';
+import expIcon3 from '../images/experience/3.png';
+import expIcon4 from '../images/experience/4.png';
+import videoTheme from '../images/experienceVideo.png';
+
+// Client Logo
+import geekwire from '../images/client_logo/1.png';
+import slack from '../images/client_logo/2.png';
+import envato from '../images/client_logo/3.png';
+import usaToday from '../images/client_logo/4.png';
+import forbes from '../images/client_logo/5.png';
+import evernote from '../images/client_logo/6.png';
+/* ------------------------------------ */
+// Features data section
+/* ------------------------------------ */
+import Image1 from '../images/feature/slide1.png';
+import Image2 from '../images/feature/slide2.png';
+import Image3 from '../images/feature/slide3.png';
+import Image4 from '../images/feature/slide4.png';
+import Image5 from '../images/feature/slide5.png';
+import Image6 from '../images/feature/slide6.png';
+
+/* ------------------------------------ */
+// Testimonial data section
+/* ------------------------------------ */
+import reviewer1 from '../images/client/client-avatar-1.jpg';
+import reviewer2 from '../images/client/client-avatar-2.jpg';
+import reviewer3 from '../images/client/client-avatar-3.jpg';
+/* ------------------------------------ */
+// Available Store data section
+/* ------------------------------------ */
+import availableThumb from '../images/availableThumb.png';
+/* ------------------------------------ */
+// Footer data section
+/* ------------------------------------ */
+import { Icon } from 'react-icons-kit';
+import { facebook } from 'react-icons-kit/fa/facebook';
+import { dribbble } from 'react-icons-kit/fa/dribbble';
+import { twitter } from 'react-icons-kit/fa/twitter';
+import footerLogo from '../images/logo.png';
+
+
+
 export const navbar = {
   logoImage: logo,
   navMenu: [
@@ -37,14 +95,6 @@ export const navbar = {
     },
   ],
 };
-
-/* ------------------------------------ */
-// Key Features data section
-/* ------------------------------------ */
-import keyFeature1 from '../../assets/image/appCreative/key_feature/1.svg';
-import keyFeature2 from '../../assets/image/appCreative/key_feature/2.svg';
-import keyFeature3 from '../../assets/image/appCreative/key_feature/3.svg';
-import keyFeature4 from '../../assets/image/appCreative/key_feature/4.svg';
 
 export const keyFeatures = {
   title: 'Business start with great features',
@@ -82,11 +132,6 @@ export const keyFeatures = {
   ],
 };
 
-/* ------------------------------------ */
-// Choose us data section
-/* ------------------------------------ */
-import chooseThumb from '../../assets/image/appCreative/chooseThumb.png';
-
 export const chooseUs = {
   title: 'Why you choose Custom app for your daily use?',
   thumb: chooseThumb,
@@ -111,23 +156,6 @@ export const chooseUs = {
     },
   ],
 };
-
-/* ------------------------------------ */
-// Experience data section
-/* ------------------------------------ */
-import expIcon1 from '../../assets/image/appCreative/experience/1.png';
-import expIcon2 from '../../assets/image/appCreative/experience/2.png';
-import expIcon3 from '../../assets/image/appCreative/experience/3.png';
-import expIcon4 from '../../assets/image/appCreative/experience/4.png';
-import videoTheme from '../../assets/image/appCreative/experienceVideo.png';
-
-// Client Logo
-import geekwire from '../../assets/image/appCreative/client_logo/1.png';
-import slack from '../../assets/image/appCreative/client_logo/2.png';
-import envato from '../../assets/image/appCreative/client_logo/3.png';
-import usaToday from '../../assets/image/appCreative/client_logo/4.png';
-import forbes from '../../assets/image/appCreative/client_logo/5.png';
-import evernote from '../../assets/image/appCreative/client_logo/6.png';
 
 export const experiences = {
   title: 'Listen our user experience stories',
@@ -204,16 +232,6 @@ export const experiences = {
   ],
 };
 
-/* ------------------------------------ */
-// Features data section
-/* ------------------------------------ */
-import Image1 from '../../assets/image/appCreative/feature/slide1.png';
-import Image2 from '../../assets/image/appCreative/feature/slide2.png';
-import Image3 from '../../assets/image/appCreative/feature/slide3.png';
-import Image4 from '../../assets/image/appCreative/feature/slide4.png';
-import Image5 from '../../assets/image/appCreative/feature/slide5.png';
-import Image6 from '../../assets/image/appCreative/feature/slide6.png';
-
 export const features = {
   title: 'Meet our all exciting features',
   slogan:
@@ -264,9 +282,6 @@ export const features = {
   ],
 };
 
-/* ------------------------------------ */
-// Pricing data section
-/* ------------------------------------ */
 export const pricing = {
   title: 'Meet our exciting Pricing Plan',
   slogan: 'We designed our pricing plan with affordable price for users',
@@ -398,13 +413,6 @@ export const pricing = {
   ],
 };
 
-/* ------------------------------------ */
-// Testimonial data section
-/* ------------------------------------ */
-import reviewer1 from '../../assets/image/appCreative/client/client-avatar-1.jpg';
-import reviewer2 from '../../assets/image/appCreative/client/client-avatar-2.jpg';
-import reviewer3 from '../../assets/image/appCreative/client/client-avatar-3.jpg';
-
 export const testimonial = {
   title: 'What our clients say about us',
   slogan: 'Some inspirational feedback from our customers on twitter',
@@ -467,11 +475,6 @@ export const testimonial = {
   ],
 };
 
-/* ------------------------------------ */
-// Available Store data section
-/* ------------------------------------ */
-import availableThumb from '../../assets/image/appCreative/availableThumb.png';
-
 export const availableStore = {
   title: 'We are available in both play store & app store ✌️',
   description:
@@ -505,9 +508,6 @@ export const availableStore = {
   ],
 };
 
-/* ------------------------------------ */
-// Faq data section
-/* ------------------------------------ */
 export const faq = {
   title: 'Frequently Ask Question',
   slogan: 'What are you looking for and find the solution on our FAQ page',
@@ -556,15 +556,6 @@ export const faq = {
     },
   ],
 };
-
-/* ------------------------------------ */
-// Footer data section
-/* ------------------------------------ */
-import { Icon } from 'react-icons-kit';
-import { facebook } from 'react-icons-kit/fa/facebook';
-import { dribbble } from 'react-icons-kit/fa/dribbble';
-import { twitter } from 'react-icons-kit/fa/twitter';
-import footerLogo from '../../assets/image/appCreative/logo.png';
 
 export const footerWidget = {
   logo: footerLogo,

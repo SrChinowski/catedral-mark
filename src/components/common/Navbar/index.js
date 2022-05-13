@@ -1,17 +1,17 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import Fade from 'react-reveal/Fade';
-import ScrollSpyMenu from 'common/components/ScrollSpyMenu';
+import ScrollSpyMenu from '../ScrollspyMenu';
 import Scrollspy from 'react-scrollspy';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Icon } from 'react-icons-kit';
 import { menu } from 'react-icons-kit/feather/menu';
 import { x } from 'react-icons-kit/feather/x';
-import Logo from 'common/components/UIElements/Logo';
-import Button from 'common/components/Button';
-import Container from 'common/components/UI/Container';
-import NavbarWrapper, { MenuArea, MobileMenu } from './navbar.style';
+import Logo from '../Logo';
+import Button from '../Button';
+import Container from '../../containers/Container';
+import NavbarWrapper, { MenuArea, MobileMenu } from './navbar.styles';
 
-import { navbar } from 'common/data/AppCreative';
+import { navbar } from '../../../assets/data';
 
 const Navbar = () => {
   const { logoImage, navMenu } = navbar;

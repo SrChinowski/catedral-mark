@@ -21,17 +21,17 @@ function App() {
           </Sticky>
           <ContentWrapper>
             <Banner />
-            <KeyFeatures />
-            <ChooseUs />
+            <KeyFeatures />{/* Andres */}
+            <ChooseUs />{/* Andres */}
             <Experiences />
             <FeatureSlider />
             <Pricing />
             <Testimonials />
             <AvailableStore />
-            <Faqs />
-            <CallToAction />
+            <Faqs />{/* Andres */}
+            <CallToAction />{/* Andres */}
           </ContentWrapper>
-          <Footer />
+          <Footer />{/* Andres */}
         </AppWrapper>
         {/* end of app creative landing */}
       </Fragment>
