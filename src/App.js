@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { ContentWrapper } from './app.styles';
 import ResetCSS from './assets/css/style';
 import Banner from './components/common/Banner';
+import Experiences from './components/common/Experience';
 import Navbar from './components/common/Navbar';
 import GlobalStyle, { AppWrapper } from './components/containers/containers';
 import { theme } from './utils/constants/common';
