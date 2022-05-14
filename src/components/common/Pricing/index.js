@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Text from '../Text';
 import Heading from '../Heading';
-import NextImage from '../Logo';
+import NextImage from '../Image';
 import { Icon } from 'react-icons-kit';
 import { ic_check_circle } from 'react-icons-kit/md/ic_check_circle';
 import { closeCircled } from 'react-icons-kit/ionicons/closeCircled';

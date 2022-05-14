@@ -6,7 +6,7 @@ import Masonry from 'react-masonry-component';
 import Box from '../Box';
 import Text from '../Text';
 import Heading from '../Heading';
-import NextImage from '../Logo';
+import NextImage from '../Image';
 import Container from '../../containers/Container';
 import { SectionHeader } from '../../../app.styles';
 import SectionWrapper, {

@@ -16,8 +16,6 @@ import { theme } from './utils/constants/common';
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Fragment>
-        <h2>HELLO WORLDD</h2>
         <ResetCSS />
         <GlobalStyle />
         {/* end of global and reset style */}
@@ -29,20 +27,32 @@ function App() {
           </Sticky>
           <ContentWrapper>
             <Banner />
-            {/* <KeyFeatures />Andres */}
-            {/* <ChooseUs />Andres */}
+            <Experiences />
+            <FeatureSlider />
+            <TestimonialSection />
+            <AvailableStore />
+
+          </ContentWrapper>
+          {/* <Sticky top={0} innerZ={9999} activeClass="sticky-active">
+            <Navbar />
+          </Sticky>
+          <ContentWrapper>
+            <Banner />
+
+            <KeyFeatures /> Andres
+            <ChooseUs />
+
             <Experiences />
             <FeatureSlider />
             <Pricing />
             <TestimonialSection />
             <AvailableStore />
-            {/* <Faqs />Andres */}
-            {/* <CallToAction />Andres */}
+            <Faqs />
+            <CallToAction />
           </ContentWrapper>
-          {/* <Footer />Andres */}
-        </AppWrapper>
-        {/* end of app creative landing */}
-      </Fragment>
+          <Footer /> */}
+        </AppWrapper> 
+        {/* /* end of app creative landing */}
     </ThemeProvider>
   );
 }

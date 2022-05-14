@@ -5,7 +5,7 @@ import Input from '../Input';
 import Select from '../Select';
 import Button from '../Button';
 import Heading from '../Heading';
-import NextImage from '../Logo';
+import NextImage from '../Image';
 import Container from '../../containers/Container';
 import BarCode from '../../../assets/images/bar-code.png';
 import SectionWrapper, {

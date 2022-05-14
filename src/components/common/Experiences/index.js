@@ -5,7 +5,7 @@ import { ic_play_arrow } from 'react-icons-kit/md/ic_play_arrow';
 import { openModal, closeModal } from '@redq/reuse-modal';
 import Button from '../Button';
 import Container from '../../containers/Container';
-import NextImage from '../Logo';
+import NextImage from '../Image';
 import Text from '../Text';
 import Heading from '../Heading';
 import { SectionHeader } from '../../../app.styles';
@@ -21,6 +21,7 @@ import SectionWrapper, {
   ImageSlide,
 } from './experience.style';
 import { experiences } from '../../../assets/data';
+import Image from '../Image';
 
 // close button for modal
 const CloseModalButton = () => (
@@ -64,7 +65,7 @@ const Experiences = () => {
       closeOnClickOutside: true,
     });
   };
-
+ 
   return (
     <SectionWrapper id="experience">
       <Container>
@@ -74,7 +75,7 @@ const Experiences = () => {
         </SectionHeader>
         <ExperienceMainWrap>
           <VideoArea onClick={handleVideoModal}>
-            <NextImage src={video_theme} alt="Microsoft" />
+            <Image src={video_theme} alt="Microsoft" />
             <Button
               className="video__btn"
               icon={<Icon className="plus" icon={ic_play_arrow} />}

@@ -9,7 +9,7 @@ import Container from '../../containers/Container';
 import { SectionHeader } from '../../../app.styles';
 import SectionWrapper, {
   ImageGalleryWrap,
-  FeatureContactWrapper,
+  FeatureContactWrapper, 
   FeatureItemWrapper,
 } from './featureSlider.style';
 
@@ -46,7 +46,7 @@ const FeatureSlider = () => {
                   key={`slide__thumb${item.id}`}
                 >
                   <Image
-                    src={item.thumbnail?.src}
+                    src={item.thumbnail}
                     alt={`Slide Thumb${item.id}`}
                   />
                 </SwiperSlide>
@@ -55,7 +55,7 @@ const FeatureSlider = () => {
           </ImageGalleryWrap>
           <FeatureItemWrapper>
             <Swiper
-              onSwiper={setThumbsSwiper}
+              onSwiper={() => setThumbsSwiper}
               spaceBetween={0}
               centeredSlides={true}
               slidesPerView="auto"
