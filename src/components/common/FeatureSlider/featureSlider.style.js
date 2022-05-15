@@ -69,6 +69,21 @@ export const ImageGalleryWrap = styled.div`
     background-repeat: no-repeat;
     background-size: contain;
   }
+  .swiper{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: flex;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+  }  
+
   .swiper.swiper-horizontal {
     width: 226px;
     cursor: pointer;
@@ -89,6 +104,10 @@ export const FeatureItemWrapper = styled.div`
   .swiper {
     overflow: none;
     .swiper-wrapper {
+      display: flex;
+      width:100%;
+      height:100%;
+      z-index: 1;
       transform: none !important;
       flex-wrap: wrap;
       justify-content: space-between;
