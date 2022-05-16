@@ -4,6 +4,8 @@ import Scrollspy from 'react-scrollspy';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import {DrawerContext}  from '../../utils/contexts/DrawerContext';
+import Button from './Button';
+import { navbar } from '../../assets/data';
 
 const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
   const { dispatch } = useContext(DrawerContext);
@@ -60,6 +62,7 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
           )}
         </li>
       ))}
+      <Button title={navbar.navBtn} />
     </Scrollspy>
   );
 };

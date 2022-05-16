@@ -14,7 +14,7 @@ import NavbarWrapper, { MenuArea, MobileMenu } from './navbar.styles';
 import { navbar } from '../../../assets/data';
 
 const Navbar = () => {
-  const { logoImage, navMenu } = navbar;
+  const { logoImage, navMenu, navBtn } = navbar;
   const [state, setState] = useState({
     mobileMenu: false,
   });
@@ -95,7 +95,7 @@ const Navbar = () => {
               </li>
             ))}
           </Scrollspy>
-          <Button title="Try for Free" />
+          <Button title={navBtn} />
         </Container>
       </MobileMenu>
       {/* end of mobile menu */}

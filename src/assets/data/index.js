@@ -62,6 +62,7 @@ import footerLogo from '../images/logo.png';
 
 export const navbar = {
   logoImage: logo,
+  navBtn: 'Iniciar Sesion',
   navMenu: [
     {
       id: 1,
