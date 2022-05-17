@@ -95,7 +95,13 @@ const Navbar = () => {
               </li>
             ))}
           </Scrollspy>
-          <Button title={navBtn} />
+          <Button title={navBtn}>
+            <AnchorLink
+                  href={'/login'}
+                >
+                  {navBtn}
+            </AnchorLink>
+          </Button>
         </Container>
       </MobileMenu>
       {/* end of mobile menu */}
