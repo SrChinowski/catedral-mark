@@ -15,8 +15,8 @@ const CallToAction = () => {
     <SectionWrapper>
       <Container>
         <Content>
-          <img src={illustration?.src} alt="shape" />
-          <img src={illustration2?.src} alt="shape" />
+          <img src={illustration} alt="shape" />
+          <img src={illustration2} alt="shape" />
           <ContentWrap>
             <Heading
               as="h3"

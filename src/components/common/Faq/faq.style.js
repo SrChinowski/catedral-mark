@@ -15,6 +15,7 @@ const SectionWrapper = styled.section`
 
 export const ContentWrapper = styled.div`
   margin-top: -40px;
+  position: relative;
   .masonryGrid {
     margin-left: -30px;
     margin-right: -30px;
@@ -25,8 +26,9 @@ export const ContentWrapper = styled.div`
   }
 `;
 export const MasonryItem = styled.div`
-  width: 50%;
-  margin-top: 40px;
+width: 50%;  
+margin-top: 40px;
+position: absolute;
   padding-left: 30px;
   padding-right: 30px;
   @media only screen and (max-width: 768px) {
@@ -37,6 +39,10 @@ export const MasonryItem = styled.div`
     width: 100%;
   }
 `;
+export const MasonryWrapper2 = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 
 export const FaqItem = styled.div`
   border-bottom: 1px solid ${themeGet('colors.borderColor')};

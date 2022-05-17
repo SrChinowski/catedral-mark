@@ -7,6 +7,7 @@ import SectionWrapper, {
   ContentWrapper,
   MasonryItem,
   FaqItem,
+  MasonryWrapper2,
 } from './faq.style';
 import { faq } from '../../../assets/data';
 import Container from '../../containers/Container';
@@ -25,7 +26,7 @@ const Faq = () => {
           <Text content={slogan} />
         </SectionHeader>
         <ContentWrapper>
-          <Masonry className="masonryGrid" options={masonryOptions}>
+          <Masonry  className="masonryGrid" options={masonryOptions}>
             {faqs.map((faq) => (
               <MasonryItem id={faq.id} key={faq.id}>
                 <FaqItem>
