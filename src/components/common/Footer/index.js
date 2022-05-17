@@ -26,14 +26,14 @@ const Footer = () => {
               <p>
                 © 2020 Team
                 <Link href={footerWidget.siteUrl}>
-                  <a>{footerWidget.siteName}</a>
+                  <a href='/'>{footerWidget.siteName}</a>
                 </Link>
               </p>
               <Text className="copyright" content="All rights reserved." />
               <Nav className="social__share">
                 {footerWidget.socialLinks.map((item) => (
                   <Link key={item.id} href={item.link}>
-                    <a className={item.name}>{item.icon}</a>
+                    <a href='/' className={item.name}>{item.icon}</a>
                   </Link>
                 ))}
               </Nav>
@@ -46,7 +46,7 @@ const Footer = () => {
               <Nav>
                 {footerWidget.aboutUs.menuItems.map((item) => (
                   <Link key={item.id} href={item.url}>
-                    <a>{item.text}</a>
+                    <a href='/'>{item.text}</a>
                   </Link>
                 ))}
               </Nav>
@@ -59,7 +59,7 @@ const Footer = () => {
               <Nav>
                 {footerWidget.ourInformation.menuItems.map((item) => (
                   <Link key={item.id} href={item.url}>
-                    <a>{item.text}</a>
+                    <a href='/'>{item.text}</a>
                   </Link>
                 ))}
               </Nav>
@@ -72,7 +72,7 @@ const Footer = () => {
               <Nav>
                 {footerWidget.myAccount.menuItems.map((item) => (
                   <Link key={item.id} href={item.url}>
-                    <a>{item.text}</a>
+                    <a href='/'>{item.text}</a>
                   </Link>
                 ))}
               </Nav>

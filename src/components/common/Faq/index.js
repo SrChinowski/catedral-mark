@@ -7,7 +7,6 @@ import SectionWrapper, {
   ContentWrapper,
   MasonryItem,
   FaqItem,
-  MasonryWrapper2,
 } from './faq.style';
 import { faq } from '../../../assets/data';
 import Container from '../../containers/Container';
