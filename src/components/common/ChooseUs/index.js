@@ -1,12 +1,12 @@
 import React from 'react';
-import Text from 'common/components/Text';
-import NextImage from 'common/components/NextImage';
-import Heading from 'common/components/Heading';
-import Container from 'common/components/UI/Container';
-import FeatureBlock from 'common/components/FeatureBlock';
+import Text from '../Text';
+import NextImage from '../Image';
+import Heading from '../Heading';
+import FeatureBlock from '../FeatureBlock';
 import SectionWrapper, { ThumbWrapper, TextWrapper } from './chooseUs.style';
 
-import ChooseUs from 'common/data/AppCreative';
+import {chooseUs} from '../../../assets/data';
+import Container from '../../containers/Container';
 
 const ChooseUs = () => {
   const { title, thumb, features } = chooseUs;

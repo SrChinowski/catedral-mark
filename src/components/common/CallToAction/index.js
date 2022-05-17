@@ -1,11 +1,9 @@
 import React from 'react';
-
-import Container from 'common/components/UI/Container';
-import Heading from 'common/components/Heading';
-import Button from 'common/components/Button';
-
-import illustration from 'common/assets/image/appCreative/shapeLeft1.png';
-import illustration2 from 'common/assets/image/appCreative/shapeRight1.png';
+import Heading from '../Heading';
+import Button from '../Button';
+import Container from '../../containers/Container'
+import illustration from '../../../assets/images/shapeLeft1.png';
+import illustration2 from '../../../assets/images/shapeRight1.png';
 import SectionWrapper, {
   Content,
   ButtonWrap,
