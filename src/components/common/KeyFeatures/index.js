@@ -1,17 +1,17 @@
 import React, { Fragment } from 'react';
 import Fade from 'react-reveal/Fade';
-import Text from 'common/components/Text';
-import Heading from 'common/components/Heading';
-import NextImage from 'common/components/NextImage';
-import Container from 'common/components/UI/Container';
-import FeatureBlock from 'common/components/FeatureBlock';
-import { SectionHeader } from '../appCreative.style';
+import Text from '../Text';
+import Heading from '../Heading';
+import NextImage from '../Image';
+import FeatureBlock from '../FeatureBlock';
+import { SectionHeader } from '../../../app.styles';
 import { SectionWrapper, FeatureWrapper } from './keyFeatures.style';
 
-import KeyFeatures from 'common/data/AppCreative';
+import {keyFeatures} from '../../../assets/data';
+import Container from '../../containers/Container';
 
 const KeyFeatures = () => {
-  const { slogan, title, features } = KeyFeatures;
+  const { slogan, title, features } = keyFeatures;
 
   return (
     <SectionWrapper id="keyFeatures">

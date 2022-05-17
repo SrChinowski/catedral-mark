@@ -1,10 +1,9 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import Link from 'next/link';
-import Container from 'common/components/UI/Container';
-import Heading from 'common/components/Heading';
-import NextImage from 'common/components/NextImage';
-import Text from 'common/components/Text';
+import Link from '../Link';
+import Heading from '../Heading';
+import NextImage from '../Image';
+import Text from '../Text';
 
 import FooterWrapper, {
   FooterInner,
@@ -13,7 +12,8 @@ import FooterWrapper, {
   Nav,
 } from './footer.style';
 
-import { footerWidget } from 'common/data/AppCreative';
+import { footerWidget } from '../../../assets/data';
+import Container from '../../containers/Container';
 
 const Footer = () => {
   return (

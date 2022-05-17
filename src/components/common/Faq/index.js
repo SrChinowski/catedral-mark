@@ -1,15 +1,15 @@
 import React from 'react';
 import Masonry from 'react-masonry-component';
-import Container from 'common/components/UI/Container';
-import Heading from 'common/components/Heading';
-import Text from 'common/components/Text';
-import { SectionHeader } from '../appCreative.style';
+import Heading from '../Heading';
+import Text from '../Text';
+import { SectionHeader } from '../../../app.styles';
 import SectionWrapper, {
   ContentWrapper,
   MasonryItem,
   FaqItem,
 } from './faq.style';
-import { faq } from 'common/data/AppCreative';
+import { faq } from '../../../assets/data';
+import Container from '../../containers/Container';
 
 const masonryOptions = {
   originTop: true,
