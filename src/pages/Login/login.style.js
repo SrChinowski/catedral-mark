@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import bannerImg from '../../assets/images/login.png';
+
 const LoginWrapper = styled.section`
   overflow: hidden;
   display: flex;
@@ -7,7 +9,7 @@ const LoginWrapper = styled.section`
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-image: url("https://images.unsplash.com/photo-1560931465-4388bfd3ada0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2F0ZWRyYWwlMjBkZSUyMG1leGljb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+  background-image: url(${bannerImg});
 `;
 
 export const LoginLayout = styled.div`
@@ -18,13 +20,35 @@ export const LoginLayout = styled.div`
   min-height: 100vh;
 `
 export const Card = styled.div`
-  padding: 10px;
-  max-width: 25%;
-  height: 300px;
-  margin-left: 10%;
-  height: 100%;
+  padding: 2rem;
   background-color: white;
   border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    max-width: 80%;
+    height: 50vh;
+  }
+  @media (min-width: 992px) {
+    max-width: 20%;
+    height: 50vh;
+    margin-left: 10%;
+  }
+  @media (min-width: 1220px) {
+    max-width: 20%;
+    height: 50vh;
+    margin-left: 10%;
+  }
+  @media (max-width: 768px) {
+      max-width: 20%;
+    height: 50vh;
+    margin-left: 10%;
+  }
+`
+export const Separator = styled.div`
+height: 1.5rem;
 `
 
 export default LoginWrapper;
