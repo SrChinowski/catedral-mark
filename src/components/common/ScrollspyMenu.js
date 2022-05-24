@@ -62,7 +62,7 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
           )}
         </li>
       ))}
-      <Button title={navbar.navBtn} />
+      <Button className="primary" title={navbar.navBtn} onClick={() => {window.replace('/login')}}/>
     </Scrollspy>
   );
 };

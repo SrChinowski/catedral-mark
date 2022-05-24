@@ -136,7 +136,7 @@ export const ButtonGroup = styled.div`
       font-size: 15px;
       min-height: 55px;
       &:hover {
-        box-shadow: 0px 9px 20px -5px rgba(108, 36, 126, 0.57);
+        box-shadow: 0px 9px 20px -5px rgba(36, 37, 126, 0.57);;
       }
     }
 
