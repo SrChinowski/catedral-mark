@@ -8,6 +8,7 @@ import {
   Route,
 } from "react-router-dom";
 import AppLogin from './pages/Login';
+import AppRegister from './pages/Register';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,6 +18,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/login" element={<AppLogin />} />
+        <Route path="/register" element={<AppRegister />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
