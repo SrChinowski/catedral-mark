@@ -18,6 +18,7 @@ import { ThemeProvider } from 'styled-components';
 import { useState } from 'react';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { Controller, useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 
 export const themeOptions = createTheme({
   palette: {
@@ -75,6 +76,7 @@ const AppLogin = () => {
             <GlobalStyle />
             <LoginLayout>
                 <Card >
+
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <Heading content={'Hola'} style={{fontWeight: '700', marginBottom: '5px'}}/>
                         <Text content={'Es bueno verte de nuevo 👋'} style={{color: 'rgba(14, 14, 23, 0.7)'}}/>
@@ -88,8 +90,6 @@ const AppLogin = () => {
                                     label="Correo" 
                                     variant="outlined" fullWidth 
                                     type={'email'} size='medium'
-                                    onChange={ handleChange('mail')}
-                                    value={values.mail}
                                 /> 
                             )}
                         />
@@ -131,7 +131,7 @@ const AppLogin = () => {
                         <Separator/>
                         <div  style={{alignSelf: 'center', display: 'flex'}}>
                             <Text content={'¿No tienes una cuenta?'} style={{color: 'rgba(14, 14, 23, 0.7)'}}/>
-                            <b style={{color: themeOptions.palette.primary.main, cursor: 'pointer', marginLeft: '5px'}}>Registrate</b>
+                            <Link to="/register"><b style={{color: themeOptions.palette.primary.main, cursor: 'pointer', marginLeft: '5px'}}>Registrate</b></Link>
                         </div>
                     </form>
                 </Card>

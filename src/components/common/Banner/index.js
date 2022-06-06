@@ -18,6 +18,7 @@ import BannerWrapper, {
 import bannerImg from '../../../assets/images/bannerImg.png';
 import bannerImgMobile from '../../../assets/images/availableThumb.png';
 import Image from '../Image';
+import { Link } from 'react-router-dom';
 
 // close button for modal
 const CloseModalButton = () => (
@@ -66,22 +67,22 @@ const Banner = () => {
           <Fade up delay={100}>
             <Heading
               as="h1"
-              content="Your trusted mobile app to make days beautiful 😘"
+              content="El conocimiento de la catedral en tus manos 👋"
             />
           </Fade>
           <Fade up delay={200}>
-            <Text content="There will be a day–in our lifetime–when we get to celebrate every person on the planet having access." />
+            <Text content="Accede a nuestros recursos para ayudarte en tus investigaciones." />
           </Fade>
           <Fade up delay={300}>
             <ButtonGroup>
-              <Button className="primary" title="Start 14-days free trail" />
+            <Link to="/login"><Button className="primary" title="Inicia Sesion"/></Link>
               <div onClick={handleVideoModal}>
                 <Button
                   className="text"
                   variant="textButton"
                   icon={<Icon icon={playCircle} />}
                   iconPosition="left"
-                  title="How it works"
+                  title="Como funciona?"
                 />
               </div>
             </ButtonGroup>
