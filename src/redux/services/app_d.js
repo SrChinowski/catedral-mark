@@ -8,4 +8,4 @@ import api from "./api";
 export const appLoginService = (email, password) => api.post('users/login', {
     email: "example@email.com",
     password: "password"
-}).then(({token}) => token)
+}).then(({data}) => data)

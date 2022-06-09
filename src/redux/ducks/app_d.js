@@ -3,7 +3,8 @@ import { Write } from "../../utils/write";
 import { AppSchema } from "../schema";
 import { appLoginService } from "../services/app_d";
 
-const SET_VALUE = 'APP/SET_VALUE'
+const PREFIX = 'APP';
+const SET_VALUE = 'SET_VALUE';
 const initialState = AppSchema;
 
 const App = Write({ reducer : 'app'})
@@ -16,12 +17,17 @@ export const appLogin = (email, password) => (dispatch, getState) => {
 
     return appLoginService(email, password)
         .then(({token, first, error}) => {
+            console.log(token)
             if(error){
                 console.log('ERROR EN SERVICIO')
                 appLogin.stopFetch();
             }
             else{
-                dispatch(App.setValue('', {token}, 'root'))
+                
+                dispatch(App.setValue('', {
+                    token: token
+                }, 'root'))
+
                 appLogin.stopFetch();
             }
         })
@@ -30,13 +36,9 @@ export const appLogin = (email, password) => (dispatch, getState) => {
 //Reducer
 export default function reducer(state = initialState, action){
     switch(action.type){
-        case SET_VALUE:
-            return {
-                ...state, 
-                statuses: action.payload,
-                errors: action?.error ? action?.error : state.errors
-            };
-            
-        default: return state;
+        case `${PREFIX}/${SET_VALUE}`:
+            return {...state, ...action.payload};
+        default: 
+            return state;
     }
 }

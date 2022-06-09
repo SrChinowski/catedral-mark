@@ -15,6 +15,8 @@ import { useState } from 'react';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
+import { useDispatch } from 'react-redux';
+import { appLogin } from '../../redux/ducks/app_d';
 
 export const themeOptions = createTheme({
   palette: {
@@ -35,6 +37,7 @@ export const themeOptions = createTheme({
 });
 
 const AppLogin = () => {
+    const dispatch = useDispatch()
 
     //Data States
     const [values, setValues] = useState({
@@ -58,6 +61,7 @@ const AppLogin = () => {
     //Fetchers
     const onSubmit = () => {
         console.log(values)
+        dispatch(appLogin(values.mail, values.password));
     };
 
     return ( 

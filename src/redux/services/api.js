@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: process.env.REACT_APP_API_URL
+    baseURL: 'https://marc-biblio-api.herokuapp.com/api'
 })
 
 // const UNAUTH_STATUS = 401;

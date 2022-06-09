@@ -15,6 +15,8 @@
     "@testing-library/user-event": "^13.2.1",
     "@types/react-redux": "^7.1.24",
     "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "dotenv-webpack": "^7.1.0",
     "polished": "^4.2.2",
     "react": "^18.1.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
@@ -51,6 +53,11 @@
       "react-app",
       "react-app/jest"
     ]
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
   },
   "browserslist": {
     "production": [
