@@ -11,6 +11,8 @@ import AppLogin from './pages/Login';
 import AppRegister from './pages/Register';
 import { Provider } from 'react-redux';
 import STORE from './redux/store';
+import Dashboard from './pages/Dashboard';
+import PrivateRoute from './utils/helpers/PrivateRoute';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,6 +23,9 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/login" element={<AppLogin />} />
         <Route path="/register" element={<AppRegister />} />
+        <Route path="/app" element={
+          <PrivateRoute component={<Dashboard/>} />
+        } /> 
       </Routes>
     </Provider>
     </BrowserRouter>

@@ -11,12 +11,13 @@ import {
     InputAdornment
 } from '@mui/material';
 import { ThemeProvider } from 'styled-components';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
 import { useDispatch } from 'react-redux';
 import { appLogin } from '../../redux/ducks/app_d';
+import { isUserAuthenticated } from '../../utils/helpers';
 
 export const themeOptions = createTheme({
   palette: {
@@ -60,6 +61,9 @@ const AppLogin = () => {
 
     //Fetchers
     const onSubmit = () => dispatch(appLogin(values.mail, values.password));
+
+    //useEffects
+    useEffect(() => {isUserAuthenticated() && window.location.replace('/app')}, [])
 
     return ( 
         <ThemeProvider theme={themeOptions}>

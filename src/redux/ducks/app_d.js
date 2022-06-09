@@ -38,7 +38,7 @@ export const appLogin = (email, password) => (dispatch, getState) => {
                 dispatch(App.setValue('', {
                     token: token
                 }, 'root'))
-
+                localStorage.setItem('catedralToken', token)
                 appLogin.stopFetch();
             }
         })

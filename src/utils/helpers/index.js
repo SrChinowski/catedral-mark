@@ -1,3 +1,5 @@
+import jwtDecode from 'jwt-decode';
+
 export const parseJwt = (token) => {
     var base64Url = token.split('.')[1];
     var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
@@ -7,3 +9,19 @@ export const parseJwt = (token) => {
 
     return JSON.parse(jsonPayload);
 };
+
+export const isUserAuthenticated = () => {
+    let token = localStorage.getItem('catedralToken')
+    if(token){
+        let tokenExpiration = jwtDecode(token).exp;
+        let dateNow = new Date();
+
+        if(tokenExpiration < dateNow.getTime()/1000){
+            return(false)
+        }else{
+            return(true)
+        }
+    } else {
+       return(false)
+    }
+}

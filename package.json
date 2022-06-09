@@ -17,6 +17,7 @@
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
     "dotenv-webpack": "^7.1.0",
+    "jwt-decode": "^3.1.2",
     "polished": "^4.2.2",
     "react": "^18.1.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
