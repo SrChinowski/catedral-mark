@@ -4,8 +4,6 @@ import Text from '../../components/common/Text';
 import LoginWrapper, { Card, LoginLayout, Separator} from './register.style';
 import {
     TextField,
-    FormControlLabel,
-    Checkbox,
     Button,
     createTheme,
     FormControl,
