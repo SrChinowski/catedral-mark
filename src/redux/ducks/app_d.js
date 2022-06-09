@@ -1,3 +1,4 @@
+import { parseJwt } from "../../utils/helpers";
 import Status from "../../utils/status";
 import { Write } from "../../utils/write";
 import { AppSchema } from "../schema";
@@ -8,6 +9,8 @@ const SET_VALUE = 'SET_VALUE';
 const initialState = AppSchema;
 
 const App = Write({ reducer : 'app'})
+const User = Write({ reducer : 'user'})
+
 
 //Actions
 export const appLogin = (email, password) => (dispatch, getState) => {
@@ -23,7 +26,15 @@ export const appLogin = (email, password) => (dispatch, getState) => {
                 appLogin.stopFetch();
             }
             else{
-                
+                const {user} = parseJwt(token);
+                dispatch(User.setValue('', {
+                    username: user.username,
+                    role: user.role,
+                    name: user.name,
+                    email: user.email,
+                    firstTime: user.firstTime,
+                    id: user._id
+                }, 'root'))
                 dispatch(App.setValue('', {
                     token: token
                 }, 'root'))

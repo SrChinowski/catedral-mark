@@ -7,6 +7,7 @@ import {
 import thunk from 'redux-thunk'
 import app from './ducks/app_d'
 import user from './ducks/user_d'
+import { Interceptor } from './services/api';
 // list ducks'
 // ducks normalized name = name_d.ts
 
@@ -23,5 +24,6 @@ const STORE = createStore(
     rootReducer, 
     composeEnhancers( applyMiddleware(thunk))
 );
-    
+
+Interceptor(STORE);  
 export default STORE;

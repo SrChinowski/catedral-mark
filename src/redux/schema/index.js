@@ -14,8 +14,6 @@ export const UserSchema = {
     name: "",
     username: "",
     email: "",
-    password: "",
     role: "",
     firstTime: false,
-    token: ""
 }

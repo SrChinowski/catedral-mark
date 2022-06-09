@@ -59,10 +59,7 @@ const AppLogin = () => {
     };
 
     //Fetchers
-    const onSubmit = () => {
-        console.log(values)
-        dispatch(appLogin(values.mail, values.password));
-    };
+    const onSubmit = () => dispatch(appLogin(values.mail, values.password));
 
     return ( 
         <ThemeProvider theme={themeOptions}>

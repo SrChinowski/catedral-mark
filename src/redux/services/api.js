@@ -8,18 +8,10 @@ const api = axios.create({
 export const Interceptor = (store) => {
 
     api.interceptors.request.use((request) => {
-        const {token} = store.getState().user;
+        const {token} = store.getState().app;
 
         if(token) request.headers.Authorization = `Bearer ${token}`
-    })
-
-    api.interceptors.response.use((response) => response,
-    (error) => {
-        if(error) {
-            store.dispatch({type: 'APP/LOGOUT'});
-            console.log('TOKEN EXPIRADO O INVALIDO')
-        }
-        return Promise.reject(error)
+        return request;     
     })
 }
 
