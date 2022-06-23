@@ -1,8 +1,8 @@
+import AppContainer from "../../components/containers/AppContainer"
+
 const Dashboard = () => {
     return ( 
-        <h1>
-            Dashboard
-        </h1>
+       <AppContainer/>
      );
 }
  
