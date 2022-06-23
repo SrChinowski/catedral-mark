@@ -5,6 +5,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import {DrawerContext}  from '../../utils/contexts/DrawerContext';
 import Button from './Button';
+import { Link } from 'react-router-dom';
 import { navbar } from '../../assets/data';
 
 const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
@@ -62,7 +63,9 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
           )}
         </li>
       ))}
-      <Button className="primary" title={navbar.navBtn} onClick={() => {window.replace('/login')}}/>
+      <Link to="/login">
+        <Button className="primary" title={navbar.navBtn}/>
+      </Link>
     </Scrollspy>
   );
 };

@@ -12,6 +12,7 @@ import Container from '../../containers/Container';
 import NavbarWrapper, { MenuArea, MobileMenu } from './navbar.styles';
 
 import { navbar } from '../../../assets/data';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const { logoImage, navMenu, navBtn } = navbar;
@@ -95,13 +96,10 @@ const Navbar = () => {
               </li>
             ))}
           </Scrollspy>
-          <Button title={navBtn}>
-            <AnchorLink
-                  href={'/login'}
-                >
-                  {navBtn}
-            </AnchorLink>
-          </Button>
+          
+          <Link to="/login">
+            <Button className="primary" title={navBtn}/>
+          </Link>
         </Container>
       </MobileMenu>
       {/* end of mobile menu */}
