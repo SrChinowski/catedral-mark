@@ -18,6 +18,7 @@ import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
 import { useDispatch } from 'react-redux';
 import { appLogin } from '../../redux/ducks/app_d';
 import { isUserAuthenticated } from '../../utils/helpers';
+import useDuck from '../../utils/hooks/useDuck';
 
 export const themeOptions = createTheme({
   palette: {
@@ -47,6 +48,9 @@ const AppLogin = () => {
         showPassword: false,
     });
 
+    //Ducks
+    const loginFetch = useDuck({reducer: 'app', status: 'GET_APP_LOGIN'})
+
     //Helpers
     const handleChange = (prop) => (event) => {
         setValues({ ...values, [prop]: event.target.value });
@@ -60,10 +64,11 @@ const AppLogin = () => {
     };
 
     //Fetchers
-    const onSubmit = () => dispatch(appLogin(values.mail, values.password));
+    const onSubmit = () => { dispatch(appLogin(values.mail, values.password)) };
 
     //useEffects
-    useEffect(() => {isUserAuthenticated() && window.location.replace('/app')}, [])
+    useEffect(() => {isUserAuthenticated(dispatch) && window.location.replace('/app')}, [])     // eslint-disable-line
+
 
     return ( 
         <ThemeProvider theme={themeOptions}>
@@ -115,7 +120,7 @@ const AppLogin = () => {
                         <Separator/>
                         <Button 
                             variant="contained" color='primary' 
-                            size='large' type="submit"
+                            size='large' type="submit" disabled={loginFetch.isFetching(() => {})}
                             style={{width: '90%', alignSelf: 'center'}}
                         >
                                 Iniciar Sesión

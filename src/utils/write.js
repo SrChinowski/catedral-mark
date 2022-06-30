@@ -1,13 +1,13 @@
 export const Write = ({ reducer }) => {
     const setValue = (
-        path,
-        value,
-        type = 'normal',
+        path, //Path obligatorio si no es root
+        value, //Info a guardar
+        type = 'normal', //Si es root busca modelo definido
     ) => (dispatch, getState) => {
         const state = getState()[reducer];
         const PREFIX = reducer.toUpperCase();
         const obj = { ...state };
-        const lodash = require('lodash')
+        const lodash = require('lodash');
     
         Object.freeze(state);
 

@@ -1,4 +1,5 @@
 import jwtDecode from 'jwt-decode';
+import { Write } from '../write';
 
 export const parseJwt = (token) => {
     var base64Url = token.split('.')[1];
@@ -6,12 +7,20 @@ export const parseJwt = (token) => {
     var jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
         return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
     }).join(''));
-
+    
     return JSON.parse(jsonPayload);
 };
 
-export const isUserAuthenticated = () => {
+export const isUserAuthenticated = (dispatch) => {
     let token = localStorage.getItem('catedralToken')
+    
+    const App = Write({ reducer : 'app'})
+    const User = Write({ reducer : 'user'})
+
+    dispatch(App.setValue('', {
+        token: token
+    }, 'root'))
+
     if(token){
         let tokenExpiration = jwtDecode(token).exp;
         let dateNow = new Date();
@@ -19,6 +28,17 @@ export const isUserAuthenticated = () => {
         if(tokenExpiration < dateNow.getTime()/1000){
             return(false)
         }else{
+            const {user} = parseJwt(token);
+
+            dispatch(User.setValue('', {
+                username: user.username,
+                role: user.role,
+                name: user.name,
+                email: user.email,
+                firstTime: user.firstTime,
+                id: user._id
+            },'root'))
+
             return(true)
         }
     } else {

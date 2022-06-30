@@ -17,10 +17,10 @@ export const appLogin = (email, password) => (dispatch, getState) => {
     const appLogin = Status({reducer: 'app', status: 'GET_APP_LOGIN'});
 
     appLogin.startFetch()
+    // console.log()
 
     return appLoginService(email, password)
         .then(({token, first, error}) => {
-            console.log(token)
             if(error){
                 console.log('ERROR EN SERVICIO')
                 appLogin.stopFetch();
@@ -34,10 +34,10 @@ export const appLogin = (email, password) => (dispatch, getState) => {
                     email: user.email,
                     firstTime: user.firstTime,
                     id: user._id
-                }, 'root'))
+                }),'root')
                 dispatch(App.setValue('', {
                     token: token
-                }, 'root'))
+                },'root'))
                 localStorage.setItem('catedralToken', token)
                 appLogin.stopFetch();
             }
