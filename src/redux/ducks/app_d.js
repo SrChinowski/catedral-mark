@@ -16,17 +16,18 @@ const User = Write({ reducer : 'user'})
 export const appLogin = (email, password) => (dispatch, getState) => {
     const appLogin = Status({reducer: 'app', status: 'GET_APP_LOGIN'});
 
-    appLogin.startFetch()
-    // console.log()
+
+    dispatch(appLogin.startFetch())
 
     return appLoginService(email, password)
         .then(({token, first, error}) => {
             if(error){
                 console.log('ERROR EN SERVICIO')
-                appLogin.stopFetch();
+                dispatch(appLogin.stopFetch())
             }
             else{
                 const {user} = parseJwt(token);
+
                 dispatch(User.setValue('', {
                     username: user.username,
                     role: user.role,
@@ -34,12 +35,14 @@ export const appLogin = (email, password) => (dispatch, getState) => {
                     email: user.email,
                     firstTime: user.firstTime,
                     id: user._id
-                }),'root')
+                },'root'))
+
                 dispatch(App.setValue('', {
                     token: token
                 },'root'))
+
                 localStorage.setItem('catedralToken', token)
-                appLogin.stopFetch();
+                dispatch(appLogin.stopFetch())
             }
         })
 } 

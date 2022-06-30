@@ -1,4 +1,7 @@
+import { Write } from "./write";
+
 const SET_VALUE = 'APP/SET_VALUE';
+const App = Write({ reducer : 'app'})
 
 export default function Status({
     reducer, status, cleanAfterSuccessResult = true,
@@ -49,8 +52,14 @@ export default function Status({
 
     const setStatus = (statuses, errors) => (dispatch, getState) => {
         const { statuses: s } = getState().app;
-        if (errors) return dispatch({ type: SET_VALUE, payload: statuses || s, error: errors });
-        return dispatch({ type: SET_VALUE, payload: statuses });
+        if (errors) 
+            return dispatch(App.setValue('', {
+                statuses: statuses || s,
+                error: errors
+            },'root'))
+        return dispatch(App.setValue('', {
+            statuses: statuses
+        },'root'))
     };
 
     const clear = (status) => (dispatch, getState) => {

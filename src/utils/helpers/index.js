@@ -17,10 +17,6 @@ export const isUserAuthenticated = (dispatch) => {
     const App = Write({ reducer : 'app'})
     const User = Write({ reducer : 'user'})
 
-    dispatch(App.setValue('', {
-        token: token
-    }, 'root'))
-
     if(token){
         let tokenExpiration = jwtDecode(token).exp;
         let dateNow = new Date();
@@ -29,6 +25,10 @@ export const isUserAuthenticated = (dispatch) => {
             return(false)
         }else{
             const {user} = parseJwt(token);
+
+            dispatch(App.setValue('', {
+                token: token
+            }, 'root'))
 
             dispatch(User.setValue('', {
                 username: user.username,
