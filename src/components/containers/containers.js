@@ -45,6 +45,15 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+export const AppStyle = styled.div`
+  .navbar{
+    background: #283891;
+    margin-bottom: 20px;
+    color: white;
+    box-shadow: 0px -7px 9px 8px rgba(0, 0, 0, 0.25);
+  }
+`;
+
 export const AppWrapper = styled.div`
   overflow: hidden;
   display: flex;

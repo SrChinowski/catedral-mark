@@ -2,19 +2,10 @@ import GlobalStyle from '../../app.styles';
 import Heading from '../../components/common/Heading';
 import Text from '../../components/common/Text';
 import LoginWrapper, { Card, LoginLayout, Separator} from './register.style';
-import {
-    TextField,
-    Button,
-    createTheme,
-    FormControl,
-    InputLabel,
-    OutlinedInput,
-    IconButton,
-    InputAdornment
-} from '@mui/material';
 import { ThemeProvider } from 'styled-components';
 import { useState } from 'react';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { Button, createTheme, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField } from '@material-ui/core';
 
 export const themeOptions = createTheme({
   palette: {

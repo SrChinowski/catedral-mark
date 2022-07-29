@@ -19,6 +19,7 @@ import { useDispatch } from 'react-redux';
 import { appLogin } from '../../redux/ducks/app_d';
 import { isUserAuthenticated } from '../../utils/helpers';
 import useDuck from '../../utils/hooks/useDuck';
+import { useSelector } from 'react-redux';
 
 export const themeOptions = createTheme({
   palette: {
@@ -40,6 +41,9 @@ export const themeOptions = createTheme({
 
 const AppLogin = () => {
     const dispatch = useDispatch()
+
+    //REDUX DATA
+    const auth = useSelector(state => state.app.token)
 
     //Data States
     const [values, setValues] = useState({
@@ -67,8 +71,7 @@ const AppLogin = () => {
     const onSubmit = () => { dispatch(appLogin(values.mail, values.password)) };
 
     //useEffects
-    useEffect(() => {isUserAuthenticated(dispatch) && window.location.replace('/app')}, [])     // eslint-disable-line
-
+    useEffect(() => {isUserAuthenticated(dispatch) && window.location.replace('/app')}, [auth])// eslint-disable-line
 
     return ( 
         <ThemeProvider theme={themeOptions}>
