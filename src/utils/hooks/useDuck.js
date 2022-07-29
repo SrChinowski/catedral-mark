@@ -30,7 +30,6 @@ function useDuck({
     };
 
     const isFailed = (listener) => {
-        updater = listener;
         return statuses.includes(failedStatus);
     };
 

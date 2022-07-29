@@ -10,7 +10,7 @@ export const Interceptor = (store) => {
     api.interceptors.request.use((request) => {
         const {token} = store.getState().app;
 
-        if(token) request.headers.Authorization = `Bearer ${token}`
+        if(token) request.headers.Authorization = `${token}`
         return request;     
     })
 }

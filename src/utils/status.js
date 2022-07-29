@@ -26,6 +26,7 @@ export default function Status({
     }
 
     const getUniquesValues = (props) => {
+        // console.log(props)
         const {
             statusList, status, statusAction = 'push',
             errorList = {}, error = '', errorAction = 'push',
@@ -55,7 +56,7 @@ export default function Status({
         if (errors) 
             return dispatch(App.setValue('', {
                 statuses: statuses || s,
-                error: errors
+                errors: errors
             },'root'))
         return dispatch(App.setValue('', {
             statuses: statuses
@@ -87,6 +88,7 @@ export default function Status({
     const stopFetch = (success = true, options) => (dispatch, getState) => {
         const { statuses, errors } = getState().app;
         const { fetchStatus, successStatus, failedStatus } = StatusCreator(status).getThreesome();
+        // console.log(failedStatus)
         const { statuses: newStatuses, errors: newErrors } = getUniquesValues({
             statusList: statuses.filter((s) => s !== fetchStatus),
             status: success ? successStatus : failedStatus,
@@ -101,11 +103,9 @@ export default function Status({
         return true;
     };
 
-
     const getErrors = () => (dispatch, getState) => {
         const { errors } = getState().app;
         const errorKey = StatusCreator(status).getFailed();
-
         if (errors[errorKey]) {
             return errors[errorKey];
         }

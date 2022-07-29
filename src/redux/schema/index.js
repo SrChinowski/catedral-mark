@@ -1,5 +1,6 @@
 export const AppSchema = {
     token: "",
+    users_list: [],
     statuses: [],
     errors: {}
 }
