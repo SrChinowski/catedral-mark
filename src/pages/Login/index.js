@@ -141,4 +141,5 @@ const AppLogin = () => {
         </LoginWrapper>
         </ThemeProvider>
      );
+}
 export default AppLogin;
