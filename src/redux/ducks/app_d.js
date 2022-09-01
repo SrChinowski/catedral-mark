@@ -3,7 +3,7 @@ import Status from "../../utils/status";
 import { Write } from "../../utils/write";
 import { AppSchema } from "../schema";
 import { appLoginService } from "../services/app_d";
-import { getAllusersService } from "../services/user_d";
+import { createUserService, deleteUsersService, disableUserdervice, getAllusersService, updateUserService, userInfoService } from "../services/user_d";
 
 const PREFIX = 'APP';
 const SET_VALUE = 'SET_VALUE';
@@ -73,7 +73,7 @@ export const deleteUsers = (id) => (dispatch, getState) => { //ONLY GOD/ADMIN
 
     dispatch(deleteUsers.startFetch());
 
-    return deleteUsersServices(id)
+    return deleteUsersService(id)
         .then(({n_users, users}) => {
             dispatch(App.setValue('', {
                 users_list: users
@@ -94,7 +94,7 @@ export const UpdateUser = (id) => (dispatch, getState) => { //ONLY GOD/ADMIN
 
     dispatch(UpdateUser.startFetch());
 
-    return UpdateUserServices(id)
+    return updateUserService(id)
         .then(({n_users, users}) => {
             dispatch(App.setValue('', {
                 users_list: users
@@ -115,7 +115,7 @@ export const DisableUser = (id) => (dispatch, getState) => { //ONLY GOD/ADMIN
 
     dispatch(DisableUser.startFetch());
 
-    return DisableUserServices(id)
+    return disableUserdervice(id)
         .then(({n_users, users}) => {
             dispatch(App.setValue('', {
                 users_list: users
@@ -136,7 +136,7 @@ export const UserInfo = (id) => (dispatch, getState) => { //ONLY GOD/ADMIN
 
     dispatch(userInfo.startFetch());
 
-    return userInfoServices(id)
+    return userInfoService(id)
         .then(({n_users, users}) => {
             dispatch(App.setValue('', {
                 users_list: users
@@ -146,6 +146,24 @@ export const UserInfo = (id) => (dispatch, getState) => { //ONLY GOD/ADMIN
         .catch((e) => {
             dispatch(userInfo.stopFetch(false, {error: 'Error al obtener información de usuarios'}))
             console.log('[ getAllUsers ]', e.response.data.error)   
+        })
+
+}
+
+export const createUser = () => (dispatch, getState) => { //ONLY GOD/ADMIN
+
+    const createUser = Status({reducer: 'app', status: 'CREATE_USER'});
+
+    dispatch(createUser.startFetch());
+
+    return createUserService()
+        .then(() => {
+            dispatch(getAllUsers())
+            dispatch(createUser.stopFetch())
+        })
+        .catch((e) => {
+            dispatch(createUser.stopFetch(false, {error: 'Error al obtener lista de usuarios'}))
+            console.log('[ createUser ]', e.response.data.error)   
         })
 
 }

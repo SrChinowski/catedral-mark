@@ -8,7 +8,8 @@ import {
     Button,
     createTheme,
     IconButton,
-    InputAdornment
+    InputAdornment,
+    CircularProgress
 } from '@mui/material';
 import { ThemeProvider } from 'styled-components';
 import { useEffect, useState } from 'react';
@@ -128,7 +129,7 @@ const AppLogin = () => {
                             size='large' type="submit" disabled={loginFetch.isFetching(() => {})}
                             style={{width: '90%', alignSelf: 'center'}}
                         >
-                                Iniciar Sesión
+                                {loginFetch.isFetching(() => {}) ? <CircularProgress /> : "Iniciar Sesión"}
                         </Button>
                         <Separator/>
                         <div  style={{alignSelf: 'center', display: 'flex'}}>

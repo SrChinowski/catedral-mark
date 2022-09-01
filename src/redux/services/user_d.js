@@ -14,3 +14,6 @@ export const disableUserdervice = (id) => api.get(`users/${id}/disable`)
 
 export const userInfoService = (id) => api.get(`user/${id}/info`)
 .then(({data}) => data);
+
+export const createUserService = (id) => api.get(`users/signup`)
+.then(({data}) => data);

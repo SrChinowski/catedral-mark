@@ -1,7 +1,7 @@
 import MaterialTable from 'material-table';
 import Typography from '@mui/material/Typography';
 import { useEffect } from 'react';
-import { Alert, Card, Snackbar } from '@mui/material';
+import { Alert, Snackbar } from '@mui/material';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../../utils/constants/common';
 import { useDispatch, useSelector } from 'react-redux';
@@ -17,7 +17,25 @@ const usersColumns = [
     { title: 'Creado en', field: 'createdAt', type: "date",
     dateSetting: { locale: "es-MX" },},
 ]
- 
+
+const actions = [
+  {
+    icon: 'save',
+    tooltip: 'Mas informacion',
+    onClick: (event, rowData) => alert("Info Completa")
+  },
+  {
+    icon: 'delete',
+    tooltip: 'Eliminar',
+    onClick: (event, rowData) => alert("Usuuario eliminado")
+  },
+  {
+    icon: 'delete',
+    tooltip: 'Deshabilitar Usuario',
+    onClick: (event, rowData) => alert("Usuuario eliminado")
+  },
+]
+  
 const UserPage = () => {
   const dispatch = useDispatch()
 
@@ -31,12 +49,12 @@ const UserPage = () => {
   },)
 
     return ( 
-        <Card style={{marginTop: '15px', height: '85vh', padding: '15px'}}>
+        <div style={{marginTop: '15px', height: '85vh', padding: '15px'}}>
             <Typography variant="h6">
               Usuarios
             </Typography>
             <Typography variant="p" gutterBottom>
-              gestiona tus usuarios
+              Gestiona tus usuarios
             </Typography>
             <hr/>
             <ThemeProvider theme={theme}>
@@ -45,33 +63,7 @@ const UserPage = () => {
                 isLoading={usersListFetch.isFetching(() => {})}
                 columns={usersColumns}
                 data={users_list}
-                actions = {[
-                  {
-                    icon: 'delete',
-                    tooltip: 'Delete User',
-                    onClick: (event, rowData) => alert("You want to Delete " + rowData.name)
-                  },
-                  {
-                    icon: 'edit',
-                    tooltip: 'Edit User',
-                    onClick: (event, rowData) => alert("You wanto to Edit " + rowData.name)
-                  },
-                  {
-                    icon: 'update',
-                    tooltip: 'Update User',
-                    onClick: (event, rowData) => alert("You want to Update " + rowData.name)
-                  },
-                  {
-                    icon: 'disable',
-                    tooltip: 'Disable User',
-                    onClick: (event, rowData) => alert("You wanto to Disable " + rowData.name)
-                  },
-                  {
-                    icon: 'info',
-                    tooltip: 'User Info',
-                    onClick: (event, rowData) => alert("Info " + rowData.name)
-                  }
-                ]}
+                actions={actions}
               />
             </ThemeProvider>
             <Snackbar open={usersListFetch.isFailed(() => {})} autoHideDuration={3000} >
@@ -79,7 +71,7 @@ const UserPage = () => {
                 {usersListFetch.getErrors()}
               </Alert>
             </Snackbar>
-        </Card> 
+        </div> 
      );
 }
  
