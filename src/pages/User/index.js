@@ -1,6 +1,6 @@
 import MaterialTable from 'material-table';
 import Typography from '@mui/material/Typography';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Alert, Card, Snackbar } from '@mui/material';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../../utils/constants/common';
@@ -9,6 +9,7 @@ import { getAllUsers } from '../../redux/ducks/app_d';
 import useDuck from '../../utils/hooks/useDuck';
 
 const usersColumns = [
+    { title: 'Acción', field: 'actions' },
     { title: 'Nombre', field: 'name' },
     { title: 'Usuario', field: 'username' },
     { title: 'Correo', field: 'email' },
@@ -45,7 +46,7 @@ const UserPage = () => {
 
   useEffect(() => {
     dispatch(getAllUsers());
-  },[])
+  },)
 
     return ( 
         <div style={{marginTop: '15px', height: '85vh', padding: '15px'}}>

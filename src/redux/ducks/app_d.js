@@ -66,6 +66,89 @@ export const getAllUsers = () => (dispatch, getState) => { //ONLY GOD/ADMIN
         })
 
 }
+// DeleteUsers
+export const deleteUsers = (id) => (dispatch, getState) => { //ONLY GOD/ADMIN
+
+    const deleteUsers = Status({reducer: 'app', status: 'DELETE_USERS'});
+
+    dispatch(deleteUsers.startFetch());
+
+    return deleteUsersServices(id)
+        .then(({n_users, users}) => {
+            dispatch(App.setValue('', {
+                users_list: users
+            },'root'))
+            dispatch(deleteUsers.stopFetch())
+        })
+        .catch((e) => {
+            dispatch(deleteUsers.stopFetch(false, {error: 'Error al elimiar usuario'}))
+            console.log('[ deleteUsers ]', e.response.data.error)   
+        })
+
+}
+
+//UpdateUser
+export const UpdateUser = (id) => (dispatch, getState) => { //ONLY GOD/ADMIN
+
+    const UpdateUser = Status({reducer: 'app', status: 'UPDATE_USERS'});
+
+    dispatch(UpdateUser.startFetch());
+
+    return UpdateUserServices(id)
+        .then(({n_users, users}) => {
+            dispatch(App.setValue('', {
+                users_list: users
+            },'root'))
+            dispatch(UpdateUser.stopFetch())
+        })
+        .catch((e) => {
+            dispatch(UpdateUser.stopFetch(false, {error: 'Error al actualizar lista de usuarios'}))
+            console.log('[ UpdateUser ]', e.response.data.error)   
+        })
+
+}
+
+//DisableUser
+export const DisableUser = (id) => (dispatch, getState) => { //ONLY GOD/ADMIN
+
+    const DisableUser = Status({reducer: 'app', status: 'DISABLE_USERS'});
+
+    dispatch(DisableUser.startFetch());
+
+    return DisableUserServices(id)
+        .then(({n_users, users}) => {
+            dispatch(App.setValue('', {
+                users_list: users
+            },'root'))
+            dispatch(DisableUser.stopFetch())
+        })
+        .catch((e) => {
+            dispatch(DisableUser.stopFetch(false, {error: 'Error al deshabilitar usuario'}))
+            console.log('[ DisableUser ]', e.response.data.error)   
+        })
+
+}
+
+//userInfo
+export const UserInfo = (id) => (dispatch, getState) => { //ONLY GOD/ADMIN
+
+    const userInfo = Status({reducer: 'app', status: 'USERS_INFO'});
+
+    dispatch(userInfo.startFetch());
+
+    return userInfoServices(id)
+        .then(({n_users, users}) => {
+            dispatch(App.setValue('', {
+                users_list: users
+            },'root'))
+            dispatch(userInfo.stopFetch())
+        })
+        .catch((e) => {
+            dispatch(userInfo.stopFetch(false, {error: 'Error al obtener información de usuarios'}))
+            console.log('[ getAllUsers ]', e.response.data.error)   
+        })
+
+}
 
 export const createUser = () => (dispatch, getState) => { //ONLY GOD/ADMIN
 
