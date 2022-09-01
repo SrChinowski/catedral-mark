@@ -1,7 +1,7 @@
 import MaterialTable from 'material-table';
 import Typography from '@mui/material/Typography';
 import { useEffect } from 'react';
-import { Alert, Card, Snackbar } from '@mui/material';
+import { Alert, Snackbar } from '@mui/material';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../../utils/constants/common';
 import { useDispatch, useSelector } from 'react-redux';
