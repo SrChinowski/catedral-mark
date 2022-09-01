@@ -19,21 +19,21 @@ const usersColumns = [
 ]
 
 const actions = [
-  // {
-  //   icon: 'save',
-  //   tooltip: 'Mas informacion',
-  //   onClick: (event, rowData) => alert("Info Completa")
-  // },
-  // {
-  //   icon: 'delete',
-  //   tooltip: 'Eliminar',
-  //   onClick: (event, rowData) => alert("Usuuario eliminado")
-  // },
-  // {
-  //   icon: 'delete',
-  //   tooltip: 'Deshabilitar Usuario',
-  //   onClick: (event, rowData) => alert("Usuuario eliminado")
-  // },
+  {
+    icon: 'save',
+    tooltip: 'Mas informacion',
+    onClick: (event, rowData) => alert("Info Completa")
+  },
+  {
+    icon: 'delete',
+    tooltip: 'Eliminar',
+    onClick: (event, rowData) => alert("Usuuario eliminado")
+  },
+  {
+    icon: 'delete',
+    tooltip: 'Deshabilitar Usuario',
+    onClick: (event, rowData) => alert("Usuuario eliminado")
+  },
 ]
   
 const UserPage = () => {
