@@ -1,6 +1,5 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import { closeModal, openModal } from '@redq/reuse-modal';
 import Text from '../Text';
 import Button from '../Button';
 import Heading from '../Heading';
@@ -10,7 +9,6 @@ import BannerWrapper, {
   BannerImage,
   BannerImageMobile,
   ButtonGroup,
-  VideoWrapper,
 } from './banner.style';
 
 import bannerImg from '../../../assets/images/bannerImg.png';
@@ -18,46 +16,8 @@ import bannerImgMobile from '../../../assets/images/availableThumb.png';
 import Image from '../Image';
 import { Link } from 'react-router-dom';
 
-// close button for modal
-const CloseModalButton = () => (
-  <Button
-    className="modalCloseBtn"
-    variant="fab"
-    onClick={() => closeModal()}
-    icon={<i className="flaticon-plus-symbol" />}
-  />
-);
-
-const ModalContent = () => (
-  <VideoWrapper>
-    <iframe
-      title="Video"
-      src="https://www.youtube.com/embed/hW98BFnVCm8"
-      frameBorder="0"
-    />
-  </VideoWrapper>
-);
-
 const Banner = () => {
-  // modal handler
-  const handleVideoModal = () => {
-    openModal({
-      config: {
-        className: 'video-modal',
-        disableDragging: true,
-        default: {
-          width: 'auto',
-          height: 'auto',
-          x: 0,
-          y: 0,
-        },
-      },
-      component: ModalContent,
-      componentProps: {},
-      closeComponent: CloseModalButton,
-      closeOnClickOutside: true,
-    });
-  };
+
   return (
     <BannerWrapper id="home">
       <Container>
@@ -69,7 +29,7 @@ const Banner = () => {
             />
           </Fade>
           <Fade up delay={200}>
-            <Text content="Accede a nuestros recursos para ayudarte en tus investigaciones." />
+            <Text content="Accede a nuestros recursos de manera digital, o visítanos de forma presencial para ayudarte en tus investigaciones." />
           </Fade>
           <Fade up delay={300}>
             <ButtonGroup>

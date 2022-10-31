@@ -33,12 +33,12 @@ function App() {
             <Banner />
 
             <KeyFeatures />
+            <AvailableStore />
             <ChooseUs />
 
             <Experiences />
             <FeatureSlider />
             <TestimonialSection />
-            <AvailableStore />
             <Faq />
             <CallToAction />
             

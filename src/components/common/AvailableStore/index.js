@@ -1,57 +1,41 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 import Text from '../Text';
-import Input from '../Input';
-import Select from '../Select';
-import Button from '../Button';
 import Heading from '../Heading';
 import NextImage from '../Image';
 import Container from '../../containers/Container';
-import BarCode from '../../../assets/images/bar-code.png';
 import SectionWrapper, {
   ThumbWrapper,
-  TextWrapper,
-  Subscribe,
-  SubscribeField,
-  BarCodeArea,
+  TextWrapper
 } from './availableStore.style';
 
 import { availableStore } from '../../../assets/data';
 
 const AvailableStore = () => {
-  const { title, description, thumb, numberPrefix } = availableStore;
+  const { title, thumb, reason1, reason2 } = availableStore;
   return (
     <SectionWrapper>
-      <Container>
+      <Container> 
         <TextWrapper>
           <Heading content={title} />
-          <Text content={description} />
-          <Subscribe>
-            <SubscribeField>
-              <Select
-                options={numberPrefix}
-                placeholder="+14"
-                className="phone_search_select"
-                aria-label="select options"
-              />
-              <Input
-                inputType="text"
-                placeholder="Phone Number"
-                iconPosition="left"
-                aria-label="number"
-              />
-            </SubscribeField>
-            <Button title="Send" type="submit" />
-          </Subscribe>
-          <BarCodeArea>
-            <Button
-              className="bar__code"
-              variant="textButton"
-              icon={<NextImage src={BarCode} alt="Scan" />}
-              iconPosition="left"
-              title="Scan to download"
-            />
-          </BarCodeArea>
+          <br/><br/>
+          <ul>
+            <li style={{display: "flex", flexDirection: "column"}}>
+              <Heading as="h3" content={"La conservación y preservación de la información"} style={{color: "white"}}/>
+              <span style={{display: "flex"}}>
+                <p>&#x2022;</p>
+                <Text content={reason1} />
+              </span>
+            </li>
+            <br/><br/>
+            <li style={{display: "flex", flexDirection: "column"}}>
+              <Heading as="h3" content={"Facilitar el acceso y difusión de la información"} style={{color: "white"}}/>
+              <span style={{display: "flex"}}>
+                <p>&#x2022;</p>
+                <Text content={reason2} />
+              </span>
+            </li>
+          </ul>
         </TextWrapper>
         <ThumbWrapper>
           <Fade right>

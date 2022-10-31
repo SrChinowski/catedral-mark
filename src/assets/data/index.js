@@ -477,10 +477,12 @@ export const testimonial = {
 };
 
 export const availableStore = {
-  title: 'We are available in both play store & app store ✌️',
+  title: '¿ Por qué digitalizar el archivo de la Catedral ? ✌️',
   description:
-    'There will be a day–in our lifetime–when we get to celebrate every person on the planet having access.',
+    'El proceso de digitalización de los materiales del archivo, en particular de la colección de Microfilms, tiene dos objetivos:',
   thumb: availableThumb,
+  reason1: "Transformar la información en un formato más fácil de manejar y consultar.",
+  reason2: "Si bien se puede consultar en el archivo en físico, en general, es desconocido por la mayoría de los investigadores ",
   numberPrefix: [
     {
       label: '+13',

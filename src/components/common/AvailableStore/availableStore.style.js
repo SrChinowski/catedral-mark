@@ -4,7 +4,7 @@ import { rgba } from 'polished';
 
 const SectionWrapper = styled.section`
   padding: 60px 0 45px;
-  background-color: ${themeGet('colors.primaryLight', '#925B9F')};
+  background-color: #29388f;
   @media only screen and (max-width: 991px) {
     padding: 85px 0 90px;
   }
