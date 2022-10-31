@@ -21,6 +21,7 @@ import { appLogin } from '../../redux/ducks/app_d';
 import { isUserAuthenticated } from '../../utils/helpers';
 import useDuck from '../../utils/hooks/useDuck';
 import { useSelector } from 'react-redux';
+import { Fade } from 'react-reveal';
 
 export const themeOptions = createTheme({
   palette: {
@@ -80,6 +81,7 @@ const AppLogin = () => {
             <GlobalStyle />
             <ValidatorForm onSubmit={onSubmit}>
                 <LoginLayout>
+                    <Fade up delay={100}>
                     <Card >
                         <Heading content={'Hola'} style={{fontWeight: '700', marginBottom: '5px'}}/>
                         <Text content={'Es bueno verte de nuevo 👋'} style={{color: 'rgba(14, 14, 23, 0.7)'}}/>
@@ -137,6 +139,7 @@ const AppLogin = () => {
                             <Link to="/register"><b style={{color: themeOptions.palette.primary.main, cursor: 'pointer', marginLeft: '5px'}}>Registrate</b></Link>
                         </div>
                     </Card>
+                    </Fade>
                 </LoginLayout>
             </ValidatorForm>
         </LoginWrapper>

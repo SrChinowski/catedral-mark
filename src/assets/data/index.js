@@ -5,10 +5,10 @@ import logo from '../images/logo.png';
 /* ------------------------------------ */
 // Key Features data section
 /* ------------------------------------ */
-import keyFeature1 from '../images/key_feature/1.svg';
-import keyFeature2 from '../images/key_feature/2.svg';
-import keyFeature3 from '../images/key_feature/3.svg';
-import keyFeature4 from '../images/key_feature/4.svg';
+import keyFeature1 from '../images/key_feature/asesoria.png';
+import keyFeature2 from '../images/key_feature/duplicate.png';
+import keyFeature3 from '../images/key_feature/consulta.png';
+import keyFeature4 from '../images/key_feature/guia.png';
 /* ------------------------------------ */
 // Choose us data section
 /* ------------------------------------ */
@@ -98,37 +98,37 @@ export const navbar = {
 };
 
 export const keyFeatures = {
-  title: 'Business start with great features',
+  title: 'Servicios del archivo de la Catedral',
   slogan:
-    'Build an incredible workplace and grow your business with Gusto’s all-in-one platform with amazing contents.',
+    'En el archivo de la catedral estamos a la orden del conocimiento, es por ello que te brindamos: ',
   features: [
     {
       id: 1,
       icon: keyFeature1,
-      title: 'Make Snap real',
+      title: 'Consulta de Material',
       description:
-        'We’re driven beyond just finishing the projects. We want to find smart solutions.',
+        'El archivo ofrece servicio de consulta en sala de los materiales de los diferentes acervos.',
     },
     {
       id: 2,
       icon: keyFeature2,
-      title: 'Total Virtual Reality',
+      title: 'Reproducción Digital',
       description:
-        'We’re driven beyond just finishing the projects. We want to find smart online solutions.',
+        'Se cuenta con el servicio de reproducción digital de los materiales, ya que por la antigüedad de estos, el fotocopiado o escaneado no es lo ideal.',
     },
     {
       id: 3,
       icon: keyFeature3,
-      title: 'Full 360 View',
+      title: 'Asesoría con tu Búsqueda',
       description:
-        'We’re driven beyond just finishing the projects. We want to find smart solutions.',
+        'Se brinda el servicio de referencia, asesoría y apoyo en la búsqueda de información útil para la investigación del usuario.',
     },
     {
       id: 4,
       icon: keyFeature4,
-      title: 'Artificial Intelligence',
+      title: 'Visitas Guiadas',
       description:
-        'We’re driven beyond just finishing the projects. We want to find smart solutions.',
+        'Con previa solicitud, se brinda el servicio de visitas guiadas en el archivo, la biblioteca y la librería de cantorales.',
     },
   ],
 };

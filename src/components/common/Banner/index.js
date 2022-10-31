@@ -1,7 +1,5 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import { Icon } from 'react-icons-kit';
-import { playCircle } from 'react-icons-kit/fa/playCircle';
 import { closeModal, openModal } from '@redq/reuse-modal';
 import Text from '../Text';
 import Button from '../Button';
@@ -76,15 +74,6 @@ const Banner = () => {
           <Fade up delay={300}>
             <ButtonGroup>
             <Link to="/login"><Button className="primary" title="Inicia Sesion"/></Link>
-              <div onClick={handleVideoModal}>
-                <Button
-                  className="text"
-                  variant="textButton"
-                  icon={<Icon icon={playCircle} />}
-                  iconPosition="left"
-                  title="Como funciona?"
-                />
-              </div>
             </ButtonGroup>
           </Fade>
         </BannerContent>

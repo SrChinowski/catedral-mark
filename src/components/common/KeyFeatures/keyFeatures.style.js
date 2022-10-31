@@ -53,7 +53,7 @@ export const FeatureWrapper = styled.div`
     .icon__wrapper {
       margin: 0 auto 22px;
       position: relative;
-      height: 80px;
+      height: 140px;
       @media only screen and (max-width: 1366px) {
         margin-bottom: 20px;
       }

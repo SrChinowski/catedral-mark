@@ -9,7 +9,6 @@ import { getAllUsers } from '../../redux/ducks/app_d';
 import useDuck from '../../utils/hooks/useDuck';
 
 const usersColumns = [
-    { title: 'Acción', field: 'actions' },
     { title: 'Nombre', field: 'name' },
     { title: 'Usuario', field: 'username' },
     { title: 'Correo', field: 'email' },
@@ -46,16 +45,18 @@ const UserPage = () => {
 
   useEffect(() => {
     dispatch(getAllUsers());
-  },)
+  },[]) //eslint-disable-line
 
     return ( 
         <div style={{marginTop: '15px', height: '85vh', padding: '15px'}}>
+
             <Typography variant="h6">
               Usuarios
             </Typography>
             <Typography variant="p" gutterBottom>
               Gestiona tus usuarios
             </Typography>
+
             <hr/>
             <ThemeProvider theme={theme}>
               <MaterialTable
@@ -64,6 +65,13 @@ const UserPage = () => {
                 columns={usersColumns}
                 data={users_list}
                 actions={actions}
+                options={{
+                  actionsColumnIndex: -1
+                }}
+                localization={
+                  {header: {
+                  actions: ''
+                }}}
               />
             </ThemeProvider>
             <Snackbar open={usersListFetch.isFailed(() => {})} autoHideDuration={3000} >
