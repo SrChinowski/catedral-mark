@@ -24,7 +24,7 @@ const FeatureSlider = () => {
 
 
   return (
-    <SectionWrapper>
+    <SectionWrapper id='history'>
       <Container>
         <SectionHeader>
           <Heading content={title} />

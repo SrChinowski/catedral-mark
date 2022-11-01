@@ -9,10 +9,11 @@ import SectionWrapper, {
   ButtonWrap,
   ContentWrap,
 } from './callToAction.style';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const CallToAction = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper id='contact'>
       <Container>
         <Content>
           <img src={illustration} alt="shape" />
@@ -20,10 +21,12 @@ const CallToAction = () => {
           <ContentWrap>
             <Heading
               as="h3"
-              content="Do you have idea to make better? Contact our support team"
+              content="¿ Te quedaste con la duda ? Nosotros la resolvemos "
             />
             <ButtonWrap>
-              <Button title="Contact Us" />
+              <AnchorLink href={"mailto:turriana@catedralmetropolitana.mx"} >
+                  <Button title="Contáctanos" />
+              </AnchorLink>
             </ButtonWrap>
           </ContentWrap>
         </Content>

@@ -36,8 +36,6 @@ import Image1 from '../images/feature/slide1.png';
 import Image2 from '../images/feature/slide2.png';
 import Image3 from '../images/feature/slide3.png';
 import Image4 from '../images/feature/slide4.png';
-import Image5 from '../images/feature/slide5.png';
-import Image6 from '../images/feature/slide6.png';
 
 /* ------------------------------------ */
 // Testimonial data section
@@ -66,32 +64,32 @@ export const navbar = {
   navMenu: [
     {
       id: 1,
-      label: 'Home',
+      label: 'Inicio',
       path: '#home',
       offset: '80',
     },
     {
       id: 2,
-      label: 'Key Features',
+      label: 'Servicios',
       path: '#keyFeatures',
       offset: '73',
     },
     {
       id: 3,
-      label: 'Pricing',
-      path: '#pricing',
+      label: 'Historia',
+      path: '#history',
       offset: '73',
     },
     {
       id: 4,
-      label: 'Client',
-      path: '#testimonial',
+      label: 'FAQ',
+      path: '#faq',
       offset: '73',
     },
     {
       id: 5,
-      label: 'FAQ',
-      path: '#faq',
+      label: 'Contacto',
+      path: '#contact',
       offset: '73',
     },
   ],
@@ -498,50 +496,56 @@ export const availableStore = {
 };
 
 export const faq = {
-  title: 'Frequently Ask Question',
-  slogan: 'What are you looking for and find the solution on our FAQ page',
+  title: 'Preguntas Frecuentes',
+  slogan: 'Archivo del Cabildo Catedral Metropolitano de México',
   faqs: [
     {
       id: 1,
-      question: 'Which domain should I purchase?',
+      question: '¿Qué tipo de información se conserva el archivo? ',
       answer:
-        "We make it easy to move to CometNine. Simply contact us and we'll move your hosting account from any other provider, regardless of the control panel. If at anytime your website is down for more than 0.1% result",
+        "Los materiales del acervo documental, contienen la información económica administrativa de la gestión del Cabildo de la Catedral, órgano rector de la Catedral de México.",
     },
     {
       id: 2,
-      question: 'Can I upgrade or downgrade my web hosting plan',
+      question: '¿De qué temporalidad son los materiales conservados?',
       answer:
-        'The pricing made me a little hesitant at first but I have been pleasantly surprised by the level of care given by CometNine.',
+        'ocumento más antiguo data de 1536, y llega hasta 1978.',
     },
     {
       id: 3,
-      question: 'How do I upgrade the storage capacity of my hosting plan?',
+      question: '¿Cuál es el acervo documental?',
       answer:
-        'Stop your viewers from getting distracted. Publish videos to your own Channel and rest easy knowing viewers won’t be annoyed by ads or pulled down a rabbit hole of unrelated videos.',
+        'contiene los documentos de la gestión del cabildo, así como la información de las cuentas, el personal, los reglamentos, y demás documentos relacionados con la administración de la Catedral de México.',
     },
     {
       id: 4,
-      question: 'What are some tips when choosing a name?',
+      question: '¿Cuál es el acervo bibliográfico?',
       answer:
-        'Get your website tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news.',
+        'Conformado por materiales que datan de 1600 hasta la actualidad, principalmente con temáticas de liturgia, historia de la iglesia, historia de la Catedral, arte religioso, entre otros.',
     },
     {
       id: 5,
-      question: 'What is in Motion Hosting’s uptime rate?',
+      question: '¿ Qué materiales resguarda la colección de libros y papeles de música ?',
       answer:
-        'Designed with beginners in mind and packed with advanced features developers will love. Start with a quick and simple install',
+        'Resguarda la música compuesta por los maestros de capilla de la catedral, así como música profana que se encontraba en el archivo desde 1600 hasta la actualidad.',
     },
     {
       id: 6,
-      question: 'What if I need help choosing the right domain?',
+      question: '¿ Qué materiales resguarda la colección de mapas y planos ?',
       answer:
-        'Create a hub for cross-functional work that also works with all your other tools. Centralize and standardize communication with Miro. All premium functional are included here with updates.',
+        'Consta de proyecciones y dibujos de arquitectos que trabajaron en la catedral desde mediados del siglo XIX hasta finales del XX.',
     },
     {
       id: 7,
-      question: 'Learn from community on Brandwagon',
+      question: '¿Qué información puedo encontrar en la colección de microfilms?',
       answer:
-        'Brian Halligan knows that you need more than a great product to have a great brand. Hear his thoughts & score a peek at our wagon.',
+        'Conserva 549 rollos de los diferentes acervos documentales, realizados desde 1960 hasta 1998 por diferentes instituciones e investigadores, y aunque no contiene todos los materiales existentes en el archivo, son una fuente histórica de consulta, pues por el proceso de adecuación de espacios, muchos se han extraviado a lo largo del tiempo.',
+    },
+    {
+      id: 8,
+      question: '¿ Qué materiales resguarda la Librería de cantorales?',
+      answer:
+        'Conserva 134 libros de coro de la Catedral de México, algunos traídos de España en el Siglo XVI, y otros confeccionados en la Nueva España en el Siglo XVIII y XIX.',
     },
   ],
 };
