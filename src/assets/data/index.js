@@ -234,52 +234,38 @@ export const experiences = {
 };
 
 export const features = {
-  title: 'Meet our all exciting features',
+  title: 'Nuestra historia',
   slogan:
-    'Build an incredible workplace and grow your business with Gusto’s all-in-one platform with amazing contents.',
+    'Conoce un poco más sobre el la historia del archivo de la catedral.',
   items: [
     {
       id: 1,
       thumbnail: Image1,
-      title: 'Professional Environment',
+      title: 'El obispado de México',
       description:
-        'We enjoy office retreats and visit famous places of our country and abroad also.',
+        'El obispado de México fue erigido en 1530, con la bula "Sacris Apostolatus Misterio", documento donde se especifica la obligación de la catedral de crear su archivo para conservar la documentación generada.',
     },
     {
       id: 2,
       thumbnail: Image2,
-      title: 'Professional Environment',
+      title: 'Nuestra Catedral',
       description:
-        'We enjoy office retreats and visit famous places of our country and abroad also.',
+        'La catedral metropolitana de México fue erigida en 1536. Con el inicio de actividades la nueva catedral comenzó a generar documentación, y en ese mismo año de 1536 se creó el primer archivo.',
     },
     {
       id: 3,
       thumbnail: Image3,
-      title: 'Professional Environment',
+      title: 'El archivo',
       description:
-        'We enjoy office retreats and visit famous places of our country and abroad also.',
+        'El Archivo del Cabildo Catedral Metropolitano de México resguarda 1431 libros, 140 legajos y 203 cajas con papeles sueltos organizados en 3019 expedientes.',
     },
     {
       id: 4,
       thumbnail: Image4,
-      title: 'Professional Environment',
+      title: 'El archivo más importante de Hispanoamérica',
       description:
-        'We enjoy office retreats and visit famous places of our country and abroad also.',
-    },
-    {
-      id: 5,
-      thumbnail: Image5,
-      title: 'Professional Environment',
-      description:
-        'We enjoy office retreats and visit famous places of our country and abroad also.',
-    },
-    {
-      id: 6,
-      thumbnail: Image6,
-      title: 'Professional Environment',
-      description:
-        'We enjoy office retreats and visit famous places of our country and abroad also.',
-    },
+        'Se trata del archivo de la iglesia catedral más importante de Hispanoamérica, y es uno de los archivos eclesiásticos más importantes del mundo hispánico.',
+    }
   ],
 };
 

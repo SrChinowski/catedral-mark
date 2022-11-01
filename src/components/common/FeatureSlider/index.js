@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SwiperCore, { Thumbs, Autoplay } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, useSwiperSlide } from 'swiper/react';
 import Image from '../Image';
 import FeatureBlock from '../FeatureBlock';
 import Text from '../Text';
@@ -19,8 +19,9 @@ SwiperCore.use([Thumbs, Autoplay]);
 
 const FeatureSlider = () => {
   const { slogan, title, items } = features;
+  const swiperSlide = useSwiperSlide();
+  const [thumbsSwiper, setThumbsSwiper] = useState(swiperSlide);
 
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
     <SectionWrapper>
@@ -29,16 +30,14 @@ const FeatureSlider = () => {
           <Heading content={title} />
           <Text content={slogan} />
         </SectionHeader>
-
+        {/* <p>Current slide is {swiperSlide.isActive ? 'active' : 'not active'}</p> */}
         <FeatureContactWrapper>
           <ImageGalleryWrap>
             <Swiper
-              thumbs={{ swiper: thumbsSwiper }}
+            onSwiper={setThumbsSwiper}
+            modules={[Thumbs]}
+        watchSlidesProgress
               spaceBetween={0}
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-              }}
             >
               {items.map((item) => (
                 <SwiperSlide
@@ -55,16 +54,18 @@ const FeatureSlider = () => {
           </ImageGalleryWrap>
           <FeatureItemWrapper>
             <Swiper
-              onSwiper={() => setThumbsSwiper}
+              
+          modules={[Thumbs]}
+          thumbs={{ swiper: thumbsSwiper }}
               spaceBetween={0}
               centeredSlides={true}
               slidesPerView="auto"
               touchRatio="0.2"
               slideToClickedSlide={true}
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-              }}
+              // autoplay={{
+              //   delay: 3000,
+              //   disableOnInteraction: true,
+              // }}
             >
               {items.map((item) => (
                 <SwiperSlide

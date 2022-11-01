@@ -34,10 +34,10 @@ function App() {
 
             <KeyFeatures />
             <AvailableStore />
+            <FeatureSlider />
             <ChooseUs />
 
             <Experiences />
-            <FeatureSlider />
             <TestimonialSection />
             <Faq />
             <CallToAction />
