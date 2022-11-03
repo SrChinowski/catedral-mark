@@ -559,20 +559,8 @@ export const footerWidget = {
       id: 1,
       icon: <Icon icon={facebook} />,
       name: 'facebook',
-      link: '#',
-    },
-    {
-      id: 2,
-      icon: <Icon icon={twitter} />,
-      name: 'twitter',
-      link: '#',
-    },
-    {
-      id: 3,
-      icon: <Icon icon={dribbble} />,
-      name: 'dribbble',
-      link: '#',
-    },
+      link: 'https://www.facebook.com/people/Archivo-del-Cabildo-Catedral-Metropolitano-de-M%C3%A9xico-Biblioteca-Turriana/100064791276806/',
+    }
   ],
   aboutUs: {
     title: 'About Us',

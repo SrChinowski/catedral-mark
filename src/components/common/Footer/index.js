@@ -24,12 +24,9 @@ const Footer = () => {
             <Fade up delay={100}>
               <NextImage src={footerWidget.logo} alt="Logo" />
               <p>
-                © 2020 Team
-                <Link href={footerWidget.siteUrl}>
-                  <a href='/'>{footerWidget.siteName}</a>
-                </Link>
+                Catedral de la Ciudad de Mexico © 2022 
               </p>
-              <Text className="copyright" content="All rights reserved." />
+              <Text className="copyright" content="Todos los derechos reservados." />
               <Nav className="social__share">
                 {footerWidget.socialLinks.map((item) => (
                   <Link key={item.id} href={item.link}>
