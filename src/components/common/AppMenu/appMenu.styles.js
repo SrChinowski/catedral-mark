@@ -29,9 +29,10 @@ export const Menuitem = styled.div`
     justify-content: left;
     align-items: center;
     width: 80%;
+    margin-top: 20px;
 
     &>p {
-        margin: 15px 0;
+        margin: 0;
         color: #6d6c6f;
     }
 `

@@ -52,10 +52,9 @@ import availableThumb from '../images/availableThumb.png';
 /* ------------------------------------ */
 import { Icon } from 'react-icons-kit';
 import { facebook } from 'react-icons-kit/fa/facebook';
-import { dribbble } from 'react-icons-kit/fa/dribbble';
-import { twitter } from 'react-icons-kit/fa/twitter';
+import {home} from 'react-icons-kit/icomoon/home'
 import footerLogo from '../images/logo.png';
-
+import {users} from 'react-icons-kit/icomoon/users'
 
 
 export const navbar = {
@@ -643,21 +642,27 @@ export const appMenuItems = {
   menuItems : [
     {
       id: 1,
-      icon: <Icon icon={facebook} />,
+      icon: <div style={{ color: '#6d6c6f' }}>
+              <Icon icon={home} />
+            </div>,
       name: 'Inicio',
       link: '/',
       rol: ['COMMON', 'ADMIN']
     },
     {
       id: 2,
-      icon: <Icon icon={facebook} />,
+      icon: <div style={{ color: '#6d6c6f' }}>
+              <Icon icon={users} />
+            </div>,
       name: 'Usuarios',
       link: '/users',
       rol: ['ADMIN']
     },
     {
       id: 3,
-      icon: <Icon icon={facebook} />,
+      icon: <div style={{ color: '#6d6c6f' }}>
+              <Icon icon={users} />
+            </div>,
       name: 'Salir',
       link: '/users',
       rol: ['ADMIN']

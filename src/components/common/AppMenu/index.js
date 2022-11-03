@@ -19,6 +19,7 @@ const AppMenu = () => {
                     title="App Creative"
                     className="main-logo"
                 />
+                <span style={{marginBottom: '40px'}}></span>
                 {menuItems.map((item) => 
                     <Menuitem>
                         <span style={{marginRight: "10px"}}>{item.icon}</span>
