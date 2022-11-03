@@ -8,6 +8,7 @@ import "../../assets/css/app.css"
 import AppNavbar from '../common/AppNavbar';
 import Container from './Container';
 import UserPage from '../../pages/User';
+import AppMenu from '../common/AppMenu';
 
 const AppContainer = () => {
 
@@ -15,11 +16,13 @@ const AppContainer = () => {
       <Box>
           <ResetCSS/>
           <GlobalStyle/> 
-          <AppNavbar />
+          <AppMenu />
+
+          {/* <AppNavbar />
 
           <Container>
             <UserPage/>
-          </Container>
+          </Container> */}
       </Box> 
      );
 }

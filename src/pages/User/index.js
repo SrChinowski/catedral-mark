@@ -48,7 +48,7 @@ const UserPage = () => {
   },[]) //eslint-disable-line
 
     return ( 
-        <div style={{marginTop: '15px', height: '85vh', padding: '15px'}}>
+        <div style={{width: "100%"}}>
 
             <Typography variant="h6">
               Usuarios

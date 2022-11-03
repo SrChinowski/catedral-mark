@@ -638,3 +638,29 @@ export const footerWidget = {
     ],
   },
 };
+
+export const appMenuItems = {
+  menuItems : [
+    {
+      id: 1,
+      icon: <Icon icon={facebook} />,
+      name: 'Inicio',
+      link: '/',
+      rol: ['COMMON', 'ADMIN']
+    },
+    {
+      id: 2,
+      icon: <Icon icon={facebook} />,
+      name: 'Usuarios',
+      link: '/users',
+      rol: ['ADMIN']
+    },
+    {
+      id: 3,
+      icon: <Icon icon={facebook} />,
+      name: 'Salir',
+      link: '/users',
+      rol: ['ADMIN']
+    },
+  ]
+}
