@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import bannerImg from '../../../assets/images/app-bg.png';
+// import bannerImg from '../../../assets/images/app-bg.png';
 
 export const AppLayout = styled.div`
   display: grid;
@@ -19,10 +19,8 @@ grid-template-rows: .5fr repeat(4, 1fr);
 
 export const AppBanner = styled.div`
     grid-area: header;
-    background-image: url(${bannerImg});
-    background-repeat: repeat-x;
-    background-size: 50% 420%;
-    height: 13vh;
+    background-color: #0d6efd;
+    height: 10vh;
 `
 export const Menuitem = styled.div`
     display: flex;
@@ -39,13 +37,12 @@ export const Menuitem = styled.div`
 
 export const CardMenu = styled.div`
     height: 95%;
-    /* border: 1px solid black;s */
+    border: 1px solid lightgray;
 
     grid-area: menu;
     grid-row-start: 1;
     grid-row-end: 6;
 
-    padding: 2rem;
     margin: 10px 0px 10px 0px;
 
     background-color: white;
@@ -53,29 +50,29 @@ export const CardMenu = styled.div`
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
     align-items: center;
-    align-self: auto;
+    /* align-self: auto; */
     width: 100%;
     min-height: 400px;
 
     @media (min-width: 0px) {
         width: 100%;
-        align-self: center;
+        /* align-self: center; */
     }
     @media (min-width: 768px) {
         width: 100%;
-        align-self: center;
+        /* align-self: center; */
     }
     @media (min-width: 992px) {
         max-width: 80%;
         margin-left: 10%;
-        align-self: auto;
+        /* align-self: auto; */
     }
     @media (min-width: 1220px) {
         max-width: 80%;
         margin-left: 10%;
-        align-self: auto;
+        /* align-self: auto; */
     }
 `
 

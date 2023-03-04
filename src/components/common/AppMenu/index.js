@@ -10,10 +10,12 @@ const AppMenu = () => {
     const { menuItems } = appMenuItems;
     return ( 
         <AppLayout>
-            <AppBanner />
+            <AppBanner>
+                
+            </AppBanner>
             <CardMenu> 
                 <Logo   
-                    logoStyle={{width: "150px", marginBottom: "15px"}}
+                    logoStyle={{width: "150px", marginBottom: "15px", padding: "1rem"}}
                     href="/app"
                     logoSrc={logoImage}
                     title="App Creative"
@@ -28,7 +30,6 @@ const AppMenu = () => {
                 )}
             </CardMenu>
             <MainContainer> 
-                
                 <UserPage />
             </MainContainer>
         </AppLayout>

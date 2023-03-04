@@ -1,14 +1,14 @@
 
 import { UserSchema } from "../schema";
-import {Write} from "../../utils/write"
-import Status from "../../utils/status"
+// import {Write} from "../../utils/write"
+// import Status from "../../utils/status"
 
 const initialState = {...UserSchema}
 
 const PREFIX = 'USER';
 const SET_VALUE = 'SET_VALUE';
 
-const User = Write({reducer: 'user'})
+// const User = Write({reducer: 'user'})
 
 //Action Example 
 

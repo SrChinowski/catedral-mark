@@ -52,7 +52,8 @@ import availableThumb from '../images/availableThumb.png';
 /* ------------------------------------ */
 import { Icon } from 'react-icons-kit';
 import { facebook } from 'react-icons-kit/fa/facebook';
-import {home} from 'react-icons-kit/icomoon/home'
+import {ic_library_add_outline} from 'react-icons-kit/md/ic_library_add_outline'
+import {search} from 'react-icons-kit/icomoon/search'
 import footerLogo from '../images/logo.png';
 import {users} from 'react-icons-kit/icomoon/users'
 
@@ -643,9 +644,9 @@ export const appMenuItems = {
     {
       id: 1,
       icon: <div style={{ color: '#6d6c6f' }}>
-              <Icon icon={home} />
+              <Icon icon={search} />
             </div>,
-      name: 'Inicio',
+      name: 'Buscador',
       link: '/',
       rol: ['COMMON', 'ADMIN']
     },
@@ -661,9 +662,9 @@ export const appMenuItems = {
     {
       id: 3,
       icon: <div style={{ color: '#6d6c6f' }}>
-              <Icon icon={users} />
+              <Icon icon={ic_library_add_outline} />
             </div>,
-      name: 'Salir',
+      name: 'Agregar Items',
       link: '/users',
       rol: ['ADMIN']
     },
