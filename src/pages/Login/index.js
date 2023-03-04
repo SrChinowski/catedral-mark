@@ -9,7 +9,8 @@ import {
     createTheme,
     IconButton,
     InputAdornment,
-    CircularProgress
+    CircularProgress,
+    Alert
 } from '@mui/material';
 import { ThemeProvider } from 'styled-components';
 import { useEffect, useState } from 'react';
@@ -88,12 +89,12 @@ const AppLogin = () => {
                         <Separator/>
                       
                         <TextValidator
-                            label="Correo" fullWidth
+                            label="Usuario" fullWidth
                             onChange={handleChange('mail')}
                             name="mail"
                             value={values.mail}
                             disabled={loginFetch.isFetching(() => {})}
-                            validators={['required', 'isEmail']}
+                            validators={['required']}
                             errorMessages={['Campo obligatorio', 'Correo no valido']}
                         />
                         <Separator/>
@@ -121,6 +122,13 @@ const AppLogin = () => {
                               }}
                         />
                         <Separator/>
+                        {
+                            loginFetch.isFailed() && (
+                                <Alert severity="error" style={{ marginTop: '15px'}}>
+                                    {String(loginFetch.getErrors())}
+                                </Alert> 
+                            )
+                        }
                         <div style={{display: 'flex', justifyContent: 'space-between', marginTop: '15px'}}>
                             <FormControlLabel control={<Checkbox defaultChecked />} label="Recuérdame" />
                             <Button variant="text">Olvidé la contraseña </Button>
