@@ -5,19 +5,13 @@ import GlobalStyle from './containers';
 import "../../assets/css/app.css"
 import AppMenu from '../common/AppMenu';
 
-const AppContainer = () => {
+const AppContainer = ({component}, page) => {
 
     return ( 
       <Box>
           <ResetCSS/>
           <GlobalStyle/> 
-          <AppMenu />
-
-          {/* <AppNavbar />
-
-          <Container>
-            <UserPage/>
-          </Container> */}
+          <AppMenu component={component} page={page}/> 
       </Box> 
      );
 }

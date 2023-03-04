@@ -4,10 +4,9 @@ import Logo from '../Logo';
 
 import { appMenuItems } from '../../../assets/data';
 import Text from '../Text';
-import UserPage from '../../../pages/User';
 import UserDropdown from "./userDropdown"
 
-const AppMenu = () => {
+const AppMenu = ({component}, page) => {
     const { menuItems } = appMenuItems;
     return ( 
         <AppLayout>
@@ -24,14 +23,14 @@ const AppMenu = () => {
                 />
                 <span style={{marginBottom: '40px'}}></span>
                 {menuItems.map((item) => 
-                    <Menuitem>
+                    <Menuitem style={item.name === page ? {backgroundColor: "antiquewhite"} : {backgroundColor: "none"}} key={item.name}>
                         <span style={{marginRight: "10px"}}>{item.icon}</span>
                         <Text content={item.name} />
                     </Menuitem>
                 )}
             </CardMenu>
             <MainContainer>
-                <UserPage />
+                {component}
             </MainContainer>
         </AppLayout>
      );

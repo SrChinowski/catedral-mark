@@ -11,9 +11,12 @@ import AppLogin from './pages/Login';
 import AppRegister from './pages/Register';
 import { Provider } from 'react-redux';
 import STORE from './redux/store';
-import Dashboard from './pages/Dashboard';
 import PrivateRoute from './utils/helpers/PrivateRoute';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AppContainer from './components/containers/AppContainer';
+import UserPage from "./pages/User"
+
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -24,7 +27,7 @@ ReactDOM.render(
         <Route path="/login" element={<AppLogin />} />
         <Route path="/register" element={<AppRegister />} />
         <Route path="/app" element={
-          <PrivateRoute component={<Dashboard/>} />
+          <PrivateRoute component={<AppContainer component={<UserPage />} page={"Buscador"}/>} /> 
         } /> 
       </Routes>
     </Provider>
