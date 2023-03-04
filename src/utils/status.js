@@ -59,7 +59,8 @@ export default function Status({
                 errors: errors
             },'root'))
         return dispatch(App.setValue('', {
-            statuses: statuses
+            statuses: statuses,
+            errors: ""
         },'root'))
     };
 

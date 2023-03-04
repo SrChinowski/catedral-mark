@@ -44,7 +44,9 @@ export const appLogin = (email, password) => (dispatch, getState) => {
                 localStorage.setItem('catedralToken', token)
                 dispatch(appLogin.stopFetch())
             }
-        })
+        }).catch((e)=> {
+            dispatch(appLogin.stopFetch(false, {error: getCustomError(e.response.data.error)}))
+        }) 
 } 
 
 export const getAllUsers = () => (dispatch, getState) => { //ONLY GOD/ADMIN
@@ -175,5 +177,14 @@ export default function reducer(state = initialState, action){
             return {...state, ...action.payload};
         default: 
             return state;
+    }
+}
+
+//Helpers
+const getCustomError = (errorMsg) => {
+    switch(errorMsg){
+        case "Incorrect password": return "Contraseña Incorrecta";
+        case "Not user found with this username" : return "Usuario no encontrado"
+        default: return errorMsg;
     }
 }
