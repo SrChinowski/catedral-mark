@@ -19,6 +19,10 @@ grid-template-rows: .5fr repeat(4, 1fr);
 
 export const AppBanner = styled.div`
     grid-area: header;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5vw;
     background-color: #0d6efd;
     height: 10vh;
 `

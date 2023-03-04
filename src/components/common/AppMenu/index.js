@@ -5,13 +5,14 @@ import Logo from '../Logo';
 import { appMenuItems } from '../../../assets/data';
 import Text from '../Text';
 import UserPage from '../../../pages/User';
+import UserDropdown from "./userDropdown"
 
 const AppMenu = () => {
     const { menuItems } = appMenuItems;
     return ( 
         <AppLayout>
             <AppBanner>
-                
+                <UserDropdown />
             </AppBanner>
             <CardMenu> 
                 <Logo   
@@ -29,7 +30,7 @@ const AppMenu = () => {
                     </Menuitem>
                 )}
             </CardMenu>
-            <MainContainer> 
+            <MainContainer>
                 <UserPage />
             </MainContainer>
         </AppLayout>
