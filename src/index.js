@@ -13,6 +13,7 @@ import { Provider } from 'react-redux';
 import STORE from './redux/store';
 import Dashboard from './pages/Dashboard';
 import PrivateRoute from './utils/helpers/PrivateRoute';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
