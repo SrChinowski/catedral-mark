@@ -18,3 +18,8 @@ export const UserSchema = {
     role: "",
     firstTime: false,
 }
+
+export const ItemsSchema = {
+    items: [],
+    n_items : 0
+}

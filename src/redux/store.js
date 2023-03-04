@@ -7,6 +7,7 @@ import {
 import thunk from 'redux-thunk'
 import app from './ducks/app_d'
 import user from './ducks/user_d'
+import items from './ducks/items_d'
 import { Interceptor } from './services/api';
 // list ducks'
 // ducks normalized name = name_d.ts
@@ -15,7 +16,8 @@ import { Interceptor } from './services/api';
 // combine reducers
 const rootReducer = combineReducers({
     app,
-    user
+    user,
+    items
 });
 
 
