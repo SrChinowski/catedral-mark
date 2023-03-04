@@ -6,6 +6,6 @@ import api from "./api";
 //     "first": Bool
 // }
 export const appLoginService = (email, password) => api.post('users/login', {
-    email: email,
+    username: email,
     password: password
 }).then(({data}) => data)
