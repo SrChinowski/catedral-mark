@@ -1,18 +1,13 @@
 import { Fragment } from "react";
 import { NavDropdown } from "react-bootstrap";
 import { useSelector } from "react-redux";
+import { findUserAction } from "../../../utils/helpers";
 
 const UserDropdown = () => {
 
     // REDUX DATA
     const user_actions = useSelector(state => state.user.role.actions)
     const user_info = useSelector(state => state.user)
-
-    //Helpers
-    const findUserAction = (actions = [], action = '') => {
-        const actionFound = !!actions.find(a => a === action);
-        return actionFound;
-    }
 
     const handleLogOut = () => {
         console.log("cerrar sesion")

@@ -21,5 +21,6 @@ export const UserSchema = {
 
 export const ItemsSchema = {
     items: [],
-    n_items : 0
+    n_items : 0,
+    item_info: {}
 }
