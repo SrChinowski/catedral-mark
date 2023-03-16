@@ -1,5 +1,6 @@
 import jwtDecode from 'jwt-decode';
 import { Write } from '../write';
+import itemsSelector from "../constants/itemsJSONs/itemsSelector.json"
 
 export const parseJwt = (token) => {
     var base64Url = token.split('.')[1];
@@ -45,3 +46,18 @@ export const isUserAuthenticated = (dispatch) => {
        return(false)
     }
 }
+
+export const findUserAction = (actions = [], action = '') => {
+    return !!actions.find(a => a === action);
+}
+
+export const getItemType = (itemType) => {
+	const itemFound = itemsSelector.find(item => item.itemType === itemType);
+	return itemFound?.label || 'Sin información';
+}
+
+export const isEmpty = value =>
+		value === undefined ||
+		value === null ||
+		(typeof value === 'object' && Object.keys (value).length === 0) ||
+		(typeof value === 'string' && value.trim ().length === 0);

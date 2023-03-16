@@ -1,0 +1,42 @@
+[
+	{
+		"label": "05 - Estado del registro",
+		"value": "state",
+		"variableType": "string"
+	},
+	{
+		"label": "06 - Tipo de registro",
+		"value": "registryType",
+		"variableType": "string"
+	},
+	{
+		"label": "07 - Nivel bibliográfico",
+		"value": "biblioLevel",
+		"variableType": "string"
+	},
+	{
+		"label": "08 - Tipo de control",
+		"value": "controlType",
+		"variableType": "string"
+	},
+	{
+		"label": "09 - Esquema de codificación",
+		"value": "codeSchema",
+		"variableType": "string"
+	},
+	{
+		"label": "17 - Nivel de codificación",
+		"value": "codeLevel",
+		"variableType": "string"
+	},
+	{
+		"label": "18 - Forma de catalogación descriptiva",
+		"value": "catalogDesc",
+		"variableType": "string"
+	},
+	{
+		"label": "19 - Requerimientos de registros relacionados",
+		"value": "registryReqs",
+		"variableType": "string"
+	}
+]

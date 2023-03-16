@@ -1,0 +1,1146 @@
+[
+	{
+		"label": "Libro Antiguo",
+		"itemType": "Antique.Book",
+		"data": {
+			"leader": {},
+			"itemTags": [
+				{
+					"label": "00-05 - Fecha de ingreso del registro",
+					"value": "date"
+				},
+				{
+					"label": "06 - Tipo de fecha o estado de la publicación",
+					"value": "dateType"
+				},
+				{
+					"label": "07-10 - Fecha 1",
+					"value": "date1"
+				},
+				{
+					"label": "11-14 - Fecha 2",
+					"value": "date2"
+				},
+				{
+					"label": "15-17 - Lugar de publicación, producción o ejecución",
+					"value": "place"
+				},
+				{
+					"label": "18-21 - Ilustraciones",
+					"value": "ilustrations"
+				},
+				{
+					"label": "22 - Audiencia a la que se dirige el ítem",
+					"value": "audience"
+				},
+				{
+					"label": "23 - Formato del material",
+					"value": "materialFormat"
+				},
+				{
+					"label": "24-27 - Naturaleza del contenido",
+					"value": "contentNature"
+				},
+				{
+					"label": "28 - Publicación gubernamental",
+					"value": "goverment"
+				},
+				{
+					"label": "29 - Publicación de conferencia",
+					"value": "confPublication"
+				},
+				{
+					"label": "31 - Índice",
+					"value": "index"
+				},
+				{
+					"label": "32 - Indefinido",
+					"value": "undefined"
+				},
+				{
+					"label": "33 - Forma literaria",
+					"value": "literaryForm"
+				},
+				{
+					"label": "34 - Biografía",
+					"value": "biography"
+				},
+				{
+					"label": "35-37 - Idioma",
+					"value": "language"
+				},
+				{
+					"label": "38 - Registro modificado",
+					"value": "modified"
+				},
+				{
+					"label": "39 - Fuente de catalogación",
+					"value": "catalogSrc"
+				}
+			],
+			"tags": {}
+		}
+	},
+	{
+		"label": "Recurso Electrónico",
+		"itemType": "Electronic.Resource",
+		"data": {
+			"leader": {},
+			"physicalDesc": [
+				{
+					"label": "00 - Categoría del material",
+					"value": "materialCat"
+				},
+				{
+					"label": "01 - Designación específica del material",
+					"value": "materialDes"
+				},
+				{
+					"label": "02 - Indefinido",
+					"value": "undefined"
+				},
+				{
+					"label": "03 - Color",
+					"value": "color"
+				},
+				{
+					"label": "04 - Dimensiones",
+					"value": "dimensions"
+				},
+				{
+					"label": "05 - Sonido",
+					"value": "sound"
+				},
+				{
+					"label": "06-08 - Intensidad de bits de la imagen",
+					"value": "bitsIntensity"
+				},
+				{
+					"label": "09 - Formatos de archivo",
+					"value": "formatsFile"
+				},
+				{
+					"label": "10 - Señales de garantía de calidad",
+					"value": "qualitySigns"
+				},
+				{
+					"label": "11 - Antecedente o fuente",
+					"value": "antecedent"
+				},
+				{
+					"label": "12 - Nivel de compresión",
+					"value": "compression"
+				},
+				{
+					"label": "13 - Calidad de reformateo",
+					"value": "reformattingQuality"
+				}
+			],
+			"itemTags": [
+				{
+					"label": "00-05 - Fecha de ingreso del registro",
+					"value": "date"
+				},
+				{
+					"label": "06 - Tipo de fecha o estado de la publicación",
+					"value": "dateType"
+				},
+				{
+					"label": "07-10 - Fecha 1",
+					"value": "date1"
+				},
+				{
+					"label": "11-14 - Fecha 2",
+					"value": "date2"
+				},
+				{
+					"label": "15-17 - Lugar de publicación, producción o ejecución",
+					"value": "place"
+				},
+				{
+					"label": "18-21 - Indefinido",
+					"value": "undefined"
+				},
+				{
+					"label": "22 - Audiencia a la que se dirige el ítem",
+					"value": "audience"
+				},
+				{
+					"label": "23 - Forma de la publicación",
+					"value": "publicationForm"
+				},
+				{
+					"label": "24-25 - Indefinido",
+					"value": "undefined24"
+				},
+				{
+					"label": "26 - Tipo de archivo de computador",
+					"value": "pcFileType"
+				},
+				{
+					"label": "27 - Indefinido",
+					"value": "undefined27"
+				},
+				{
+					"label": "28 - Publicación gubernamental",
+					"value": "goverment"
+				},
+				{
+					"label": "34 - Indefinido",
+					"value": "undefined34"
+				},
+				{
+					"label": "35-37 - Idioma",
+					"value": "language"
+				},
+				{
+					"label": "38 - Registro modificado",
+					"value": "modified"
+				},
+				{
+					"label": "39 - Fuente de catalogación",
+					"value": "catalogSrc"
+				}
+			],
+			"tags": {}
+		}
+	},
+	{
+		"label": "Material Gráfico",
+		"itemType": "Graphic.Material",
+		"data": {
+			"leader": {},
+			"physicalDesc": [
+				{
+					"label": "00 - Categoría del material",
+					"value": "materialCat"
+				},
+				{
+					"label": "01 - Designación específica del material",
+					"value": "materialDes"
+				},
+				{
+					"label": "02 - Indefinido",
+					"value": "undefined"
+				},
+				{
+					"label": "03 - Color",
+					"value": "color"
+				},
+				{
+					"label": "04 - Material de soporte principal",
+					"value": "supMainMat"
+				},
+				{
+					"label": "05 - Material de soporte secundario",
+					"value": "supSecundaryMat"
+				}
+			],
+			"itemTags": [
+				{
+					"label": "00-05 - Fecha de ingreso del registro",
+					"value": "date"
+				},
+				{
+					"label": "06 - Tipo de fecha o estado de la publicación",
+					"value": "dateType"
+				},
+				{
+					"label": "07-10 - Fecha 1",
+					"value": "date1"
+				},
+				{
+					"label": "11-14 - Fecha 2",
+					"value": "date2"
+				},
+				{
+					"label": "15-17 - Lugar de publicación, producción o ejecución",
+					"value": "releasePlace"
+				},
+				{
+					"label": "18-20 - Tiempo de reproducción para películas y videograbaciones",
+					"value": "playingTime"
+				},
+				{
+					"label": "21 - Indefinido",
+					"value": "undefined"
+				},
+				{
+					"label": "22 - Audiencia a la que se dirige el ítem",
+					"value": "audience"
+				},
+				{
+					"label": "23-27 - Indefinido",
+					"value": "undefined23"
+				},
+				{
+					"label": "28 - Publicación gubernamental",
+					"value": "goverment"
+				},
+				{
+					"label": "29 - Formato del material",
+					"value": "materialFormat"
+				},
+				{
+					"label": "30-32 - Indefinido",
+					"value": "undefined30"
+				},
+				{
+					"label": "33 - Tipo de material visual",
+					"value": "visualMaterialType"
+				},
+				{
+					"label": "34 - Técnica",
+					"value": "technic"
+				},
+				{
+					"label": "35-37 - Idioma",
+					"value": "language"
+				},
+				{
+					"label": "38 - Registro modificado",
+					"value": "modified"
+				},
+				{
+					"label": "39 - Fuente de catalogación",
+					"value": "catalogSrc"
+				}
+			],
+			"tags": {}
+		}
+	},
+	{
+		"label": "Manuscrito",
+		"itemType": "Manuscript",
+		"data": {
+			"leader": {},
+			"itemTags": [
+				{
+					"label": "00-05 - Fecha de ingreso del registro",
+					"value": "date"
+				},
+				{
+					"label": "06 - Tipo de fecha o estado de la publicación",
+					"value": "dateType"
+				},
+				{
+					"label": "07-10 - Fecha 1",
+					"value": "date1"
+				},
+				{
+					"label": "11-14 - Fecha 2",
+					"value": "date2"
+				},
+				{
+					"label": "23 - Formato del material",
+					"value": "materialFormat"
+				},
+				{
+					"label": "24-34 - Indefinido",
+					"value": "undefined"
+				},
+				{
+					"label": "35-37 - Idioma",
+					"value": "language"
+				},
+				{
+					"label": "38 - Registro modificado",
+					"value": "modified"
+				},
+				{
+					"label": "39 - Fuente de catalogación",
+					"value": "catalogSrc"
+				}
+			],
+			"tags": {}
+		}
+	},
+	{
+		"label": "Mapa",
+		"itemType": "Map",
+		"data": { 
+			"leader": {}, 
+			"physicalDesc": [
+				{
+					"label": "00 - Categoría del material",
+					"value": "materialCat"
+				},
+				{
+					"label": "01 - Designación específica del material",
+					"value": "materialDes"
+				},
+				{
+					"label": "02 - Indefinido",
+					"value": "undefined"
+				},
+				{
+					"label": "03 - Color",
+					"value": "color"
+				},
+				{
+					"label": "04 - Medio físico",
+					"value": "physicalEnv"
+				},
+				{
+					"label": "05 - Tipo de reproducción",
+					"value": "reproductionType"
+				},
+				{
+					"label": "06 - Detalles de la producción o reproducción",
+					"value": "details"
+				},
+				{
+					"label": "07 - Aspecto positivo/negativo",
+					"value": "aspect"
+				}
+			], 
+			"itemTags": [
+				{
+					"label": "00-05 - Fecha de ingreso del registro",
+					"value": "date"
+				},
+				{
+					"label": "06 - Tipo de fecha o estado de la publicación",
+					"value": "dateType"
+				},
+				{
+					"label": "07-10 - Fecha 1",
+					"value": "date1"
+				},
+				{
+					"label": "11-14 - Fecha 2",
+					"value": "date2"
+				},
+				{
+					"label": "15-17 - Lugar de publicación, producción o ejecución",
+					"value": "place"
+				},
+				{
+					"label": "18-21 - Relieve",
+					"value": "relief"
+				},
+				{
+					"label": "22-23 - Proyección",
+					"value": "projection"
+				},
+				{
+					"label": "24 - Indefinido",
+					"value": "undefined24"
+				},
+				{
+					"label": "25 - Tipo de material cartográfico",
+					"value": "materialType"
+				},
+				{
+					"label": "26-27 - Indefinido",
+					"value": "undefined"
+				},
+				{
+					"label": "28 - Publicación de gubernamental",
+					"value": "goverment"
+				},
+				{
+					"label": "29 - Formato del material",
+					"value": "materialFormat"
+				},
+				{
+					"label": "30 - Indefinido",
+					"value": "undefined30"
+				},
+				{
+					"label": "31 - Índice",
+					"value": "index"
+				},
+				{
+					"label": "32 - Indefinido",
+					"value": "undefined32"
+				},
+				{
+					"label": "33-34 - Características especiales del formato",
+					"value": "specialFormat"
+				},
+				{
+					"label": "35-37 - Idioma",
+					"value": "language"
+				},
+				{
+					"label": "38 - Registro modificado",
+					"value": "modified"
+				},
+				{
+					"label": "39 - Fuente de catalogación",
+					"value": "catalogSrc"
+				}
+			], 
+			"tags": {}
+		}
+	},
+	{
+		"label": "Partitura",
+		"itemType": "Music.Sheet",
+		"data": {
+			"leader": {},
+			"physicalDesc": [
+				{
+					"label": "00 - Categoría del material",
+					"value": "materialCat"
+				},
+				{
+					"label": "01 - Designación específica del material",
+					"value": "materialDes"
+				}
+			],
+			"itemTags": [
+				{
+					"label": "00-05 - Fecha de ingreso del registro",
+					"value": "date"
+				},
+				{
+					"label": "06 - Tipo de fecha o estado de la publicación",
+					"value": "dateType"
+				},
+				{
+					"label": "07-10 - Fecha 1",
+					"value": "date1"
+				},
+				{
+					"label": "11-14 - Fecha 2",
+					"value": "date2"
+				},
+				{
+					"label": "15-17 - Lugar de publicación, producción o ejecución",
+					"value": "place"
+				},
+				{
+					"label": "18-19 - Forma de la composición",
+					"value": "composition"
+				},
+				{
+					"label": "20 - Formato de la música",
+					"value": "musicFormat"
+				},
+				{
+					"label": "21 - Partes musicales",
+					"value": "musicalParts"
+				},
+				{
+					"label": "22 - Audiencia a la que se dirige el ítem",
+					"value": "audience"
+				},
+				{
+					"label": "23 - Formato del material",
+					"value": "materialFormat"
+				},
+				{
+					"label": "24-29 - Materiales complementarios",
+					"value": "suppMaterials"
+				},
+				{
+					"label": "30-31 - Texto literario para grabaciones sonoras",
+					"value": "textRecording"
+				},
+				{
+					"label": "32 - Indefinido",
+					"value": "undefined"
+				},
+				{
+					"label": "33 - Transposición y arreglo",
+					"value": "transposition"
+				},
+				{
+					"label": "34 - Indefinido",
+					"value": "undefined34"
+				},
+				{
+					"label": "35-37 - Idioma",
+					"value": "language"
+				},
+				{
+					"label": "38 - Registro modificado",
+					"value": "modified"
+				},
+				{
+					"label": "39 - Fuente de catalogación",
+					"value": "catalogSrc"
+				}
+			],
+			"tags": {}
+		}
+	},
+	{
+		"label": "Archivo de Computadora",
+		"itemType": "PC.File",
+		"data": {
+			"leader": {},
+			"physicalDesc": [
+				{
+					"label": "00 - Categoría del material",
+					"value": "materialCat"
+				},
+				{
+					"label": "01 - Designación específica del material",
+					"value": "materialDes"
+				},
+				{
+					"label": "02 - Indefinido",
+					"value": "undefined"
+				},
+				{
+					"label": "03 - Color",
+					"value": "color"
+				},
+				{
+					"label": "04 - Dimensiones",
+					"value": "dimensions"
+				},
+				{
+					"label": "05 - Sonido",
+					"value": "sound"
+				},
+				{
+					"label": "06-08 - Intensidad de bits de la imagen",
+					"value": "bitsIntensity"
+				},
+				{
+					"label": "09 - Formatos de archivo",
+					"value": "formatsFile"
+				},
+				{
+					"label": "10 - Señales de garantía de calidad",
+					"value": "qualitySigns"
+				},
+				{
+					"label": "11 - Antecedente o fuente",
+					"value": "antecedent"
+				},
+				{
+					"label": "12 - Nivel de compresión",
+					"value": "compression"
+				},
+				{
+					"label": "13 - Calidad de reformateo",
+					"value": "reformattingQuality"
+				}
+			],
+			"itemTags": [
+				{
+					"label": "00-05 - Fecha de ingreso del registro",
+					"value": "date"
+				},
+				{
+					"label": "06 - Tipo de fecha o estado de la publicación",
+					"value": "dateType"
+				},
+				{
+					"label": "07-10 - Fecha 1",
+					"value": "date1"
+				},
+				{
+					"label": "11-14 - Fecha 2",
+					"value": "date2"
+				},
+				{
+					"label": "15-17 - Lugar de publicación, producción o ejecución",
+					"value": "place"
+				},
+				{
+					"label": "18-21 - Indefinido",
+					"value": "undefined"
+				},
+				{
+					"label": "22 - Audiencia a la que se dirige el ítem",
+					"value": "audience"
+				},
+				{
+					"label": "23 - Forma de la publicación",
+					"value": "publicationForm"
+				},
+				{
+					"label": "24-25 - Indefinido",
+					"value": "undefined24"
+				},
+				{
+					"label": "26 - Tipo de archivo de computador",
+					"value": "pcFileType"
+				},
+				{
+					"label": "27 - Indefinido",
+					"value": "undefined27"
+				},
+				{
+					"label": "28 - Publicación gubernamental",
+					"value": "goverment"
+				},
+				{
+					"label": "34 - Indefinido",
+					"value": "undefined34"
+				},
+				{
+					"label": "35-37 - Idioma",
+					"value": "language"
+				},
+				{
+					"label": "38 - Registro modificado",
+					"value": "modified"
+				},
+				{
+					"label": "39 - Fuente de catalogación",
+					"value": "catalogSrc"
+				}
+			],
+			"tags": {}
+		}
+	},
+	{
+		"label": "Libro Impreso",
+		"itemType": "Printed.Book",
+		"data": {
+			"leader": {},
+			"physicalDesc": [
+				{
+					"label": "00 - Categoría del material",
+					"value": "materialCat"
+				},
+				{
+					"label": "01 - Designación específica del material",
+					"value": "materialDes"
+				}
+			],
+			"itemTags": [
+				{
+					"label": "00-05 - Fecha de ingreso del registro",
+					"value": "date"
+				},
+				{
+					"label": "06 - Tipo de fecha o estado de la publicación",
+					"value": "dateType"
+				},
+				{
+					"label": "07-10 - Fecha 1",
+					"value": "date1"
+				},
+				{
+					"label": "11-14 -  Fecha 2",
+					"value": "date2"
+				},
+				{
+					"label": "15-17 - Lugar de publicación, producción o ejecución",
+					"value": "place"
+				},
+				{
+					"label": "18-21 - Ilustraciones",
+					"value": "ilustrations"
+				},
+				{
+					"label": "22 - Audiencia a la que se dirige el ítem",
+					"value": "audience"
+				},
+				{
+					"label": "23 - Formato del material",
+					"value": "materialFormat"
+				},
+				{
+					"label": "24-27 - Naturaleza del contenido",
+					"value": "contentNature"
+				},
+				{
+					"label": "28 - Publicación gubernamental",
+					"value": "goverment"
+				},
+				{
+					"label": "29 - Publicación de conferencia",
+					"value": "confPublication"
+				},
+				{
+					"label": "31 - Índice",
+					"value": "index"
+				},
+				{
+					"label": "32 - Indefinido",
+					"value": "undefined"
+				},
+				{
+					"label": "33 - Forma literaria",
+					"value": "literaryForm"
+				},
+				{
+					"label": "34 - Biografía",
+					"value": "biography"
+				},
+				{
+					"label": "35-37 - Idioma",
+					"value": "language"
+				},
+				{
+					"label": "38 - Registro modificado",
+					"value": "modified"
+				},
+				{
+					"label": "39 - Fuente de catalogación",
+					"value": "catalogSrc"
+				}
+			],
+			"tags": {}
+		}
+	},
+	{
+		"label": "Grabación Sonora",
+		"itemType": "Sound.Recording",
+		"data": {
+			"leader": {},
+			"physicalDesc": [
+				{
+					"label": "00 - Categoría del material",
+					"value": "materialCat"
+				},
+				{
+					"label": "01 - Designación específica del material",
+					"value": "materialDes"
+				},
+				{
+					"label": "02 - Indefinido",
+					"value": "undefined"
+				},
+				{
+					"label": "03 - Velocidad",
+					"value": "velocity"
+				},
+				{
+					"label": "04 - Configuración de los canales de reproducción",
+					"value": "playbackChannelSetup"
+				},
+				{
+					"label": "05 - Anchura del surco o espaciado del surco",
+					"value": "grooveWidth"
+				},
+				{
+					"label": "06 - Dimensiones",
+					"value": "dimensions"
+				},
+				{
+					"label": "07 - Ancho de la cinta",
+					"value": "tapeWidth"
+				},
+				{
+					"label": "08 - Configuración de la cinta",
+					"value": "tapeSetup"
+				},
+				{
+					"label": "09 - Tipo de disco, cilindro o cinta",
+					"value": "tapeType"
+				},
+				{
+					"label": "10 - Tipo de material",
+					"value": "materialType"
+				},
+				{
+					"label": "11 - Tipo de corte",
+					"value": "trimType"
+				},
+				{
+					"label": "12 - Características especiales de la reproducción",
+					"value": "specialCharPlayback"
+				},
+				{
+					"label": "13 - Técnica de captura y almacenaje",
+					"value": "storageTechnique"
+				}
+			],
+			"itemTags": [
+				{
+					"label": "00-05 - Fecha de ingreso del registro",
+					"value": "date"
+				},
+				{
+					"label": "06 - Tipo de fecha o estado de la publicación",
+					"value": "dateType"
+				},
+				{
+					"label": "07-10 - Fecha 1",
+					"value": "date1"
+				},
+				{
+					"label": "11-14 - Fecha 2",
+					"value": "date2"
+				},
+				{
+					"label": "15-17 - Lugar de publicación, producción o ejecución",
+					"value": "place"
+				},
+				{
+					"label": "18-19 - Forma de la composición",
+					"value": "composition"
+				},
+				{
+					"label": "20 - Formato de la música",
+					"value": "musicFormat"
+				},
+				{
+					"label": "21 - Partes musicales",
+					"value": "musicalParts"
+				},
+				{
+					"label": "22 - Audiencia a la que se dirige el ítem",
+					"value": "audience"
+				},
+				{
+					"label": "23 - Formato del material",
+					"value": "materialFormat"
+				},
+				{
+					"label": "24-29 - Materiales complementarios",
+					"value": "suppMaterials"
+				},
+				{
+					"label": "30-31 - Texto literario para grabaciones sonoras",
+					"value": "textRecording"
+				},
+				{
+					"label": "32 - Indefinido",
+					"value": "undefined"
+				},
+				{
+					"label": "33 - Transposición y arreglo",
+					"value": "transposition"
+				},
+				{
+					"label": "34 - Indefinido",
+					"value": "undefined34"
+				},
+				{
+					"label": "35-37 - Idioma",
+					"value": "language"
+				},
+				{
+					"label": "38 - Registro modificado",
+					"value": "modified"
+				},
+				{
+					"label": "39 - Fuente de catalogación",
+					"value": "catalogSrc"
+				}
+			],
+			"tags": {}
+		}
+	},
+	{
+		"label": "Imagen Fija",
+		"itemType": "Static.Image",
+		"data": {
+			"leader": {},
+			"physicalDesc": [
+				{
+					"label": "00 - Categoría del material",
+					"value": "materialCat"
+				},
+				{
+					"label": "01 - Designación específica del material",
+					"value": "materialDes"
+				},
+				{
+					"label": "02 - Indefinido",
+					"value": "undefined"
+				},
+				{
+					"label": "03 - Color",
+					"value": "color"
+				},
+				{
+					"label": "04 - Material de soporte principal",
+					"value": "supMainMat"
+				},
+				{
+					"label": "05 - Material de soporte secundario",
+					"value": "supSecundaryMat"
+				}
+			],
+			"itemTags": [
+				{
+					"label": "00-05 - Fecha de ingreso del registro",
+					"value": "date"
+				},
+				{
+					"label": "06 - Tipo de fecha o estado de la publicación",
+					"value": "dateType"
+				},
+				{
+					"label": "07-10 - Fecha 1",
+					"value": "date1"
+				},
+				{
+					"label": "11-14 - Fecha 2",
+					"value": "date2"
+				},
+				{
+					"label": "15-17 - Lugar de publicación, producción o ejecución",
+					"value": "place"
+				},
+				{
+					"label": "18-20 - Tiempo de reproducción para películas y videograbaciones",
+					"value": "duration"
+				},
+				{
+					"label": "21 - Indefinido",
+					"value": "undefined"
+				},
+				{
+					"label": "22 - Audiencia a la que se dirige el ítem",
+					"value": "audience"
+				},
+				{
+					"label": "23-27 - Indefinido",
+					"value": "undefined23"
+				},
+				{
+					"label": "28 - Publicación gubernamental",
+					"value": "goverment"
+				},
+				{
+					"label": "29 - Formato del material",
+					"value": "materialFormat"
+				},
+				{
+					"label": "30-32 - Indefinido",
+					"value": "undefined30"
+				},
+				{
+					"label": "33 - Tipo de material visual",
+					"value": "visualMaterialType"
+				},
+				{
+					"label": "34 - Técnica",
+					"value": "technic"
+				},
+				{
+					"label": "35-37 - Idioma",
+					"value": "language"
+				},
+				{
+					"label": "38 - Registro modificado",
+					"value": "modified"
+				},
+				{
+					"label": "39 - Fuente de catalogación",
+					"value": "catalogSrc"
+				}
+			],
+			"tags": {}
+		}
+	},
+	{
+		"label": "Videograbaciones",
+		"itemType": "Video.Recordings",
+		"data": {
+			"leader": {},
+			"physicalDesc": [
+				{
+					"label": "00 - Categoría del material",
+					"value": "materialCat"
+				},
+				{
+					"label": "01 - Designación específica del material",
+					"value": "materialDes"
+				},
+				{
+					"label": "02 - Indefinido",
+					"value": "undefined"
+				},
+				{
+					"label": "03 - Color",
+					"value": "color"
+				},
+				{
+					"label": "04 - Formato de la videograbación",
+					"value": "videoFormat"
+				},
+				{
+					"label": "05 - Sonido en el medio o por separado",
+					"value": "midleSound"
+				},
+				{
+					"label": "06 - Medio para el sonido",
+					"value": "soundEnv"
+				},
+				{
+					"label": "07 - Dimensiones",
+					"value": "dimensions"
+				},
+				{
+					"label": "08 - Configuración de los canales de reproducción",
+					"value": "playingConf"
+				}
+			],
+			"itemTags": [
+				{
+					"label": "00-05 - Fecha de ingreso del registro",
+					"value": "date"
+				},
+				{
+					"label": "06 - Tipo de fecha o estado de la publicación",
+					"value": "dateType"
+				},
+				{
+					"label": "07-10 - Fecha 1",
+					"value": "date1"
+				},
+				{
+					"label": "11-14 - Fecha 2",
+					"value": "date2"
+				},
+				{
+					"label": "15-17 - Lugar de publicación, producción o ejecución",
+					"value": "place"
+				},
+				{
+					"label": "18-20 - Tiempo de reproducción para películas y videograbaciones",
+					"value": "duration"
+				},
+				{
+					"label": "21 - Indefinido",
+					"value": "undefined"
+				},
+				{
+					"label": "22 - Audiencia a la que se dirige el ítem",
+					"value": "audience"
+				},
+				{
+					"label": "23-27 - Indefinido",
+					"value": "undefined23"
+				},
+				{
+					"label": "28 - Publicación gubernamental",
+					"value": "goverment"
+				},
+				{
+					"label": "29 - Formato del material",
+					"value": "materialFormat"
+				},
+				{
+					"label": "30-32 - Indefinido",
+					"value": "undefined30"
+				},
+				{
+					"label": "33 - Tipo de material visual",
+					"value": "visualMaterialType"
+				},
+				{
+					"label": "34 - Técnica",
+					"value": "technic"
+				},
+				{
+					"label": "35-37 - Idioma",
+					"value": "language"
+				},
+				{
+					"label": "38 - Registro modificado",
+					"value": "modified"
+				},
+				{
+					"label": "39 - Fuente de catalogación",
+					"value": "catalogSrc"
+				}
+			],
+			"tags": {}
+		}
+	}
+]
