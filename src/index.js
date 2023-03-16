@@ -14,7 +14,9 @@ import STORE from './redux/store';
 import PrivateRoute from './utils/helpers/PrivateRoute';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AppContainer from './components/containers/AppContainer';
-import UserPage from "./pages/User"
+// import UserPage from "./pages/User"
+import Search from './pages/Search';
+import ItemUpdate from './components/common/Item/ItemUpdate';
 
 
 
@@ -27,8 +29,13 @@ ReactDOM.render(
         <Route path="/login" element={<AppLogin />} />
         <Route path="/register" element={<AppRegister />} />
         <Route path="/app" element={
-          <PrivateRoute component={<AppContainer component={<UserPage />} page={"Buscador"}/>} /> 
+          <PrivateRoute component={<AppContainer component={<Search />} page={"Buscador"} action={"common"}/>} /> 
         } /> 
+
+			  <Route path='/item/:item_id/update' element={ 
+          <PrivateRoute component={<AppContainer component={<ItemUpdate/> } page={"item update"} action={"common"}/>} />
+        } exact />
+
       </Routes>
     </Provider>
     </BrowserRouter>

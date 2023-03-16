@@ -4,14 +4,27 @@ import ResetCSS from '../../assets/css/style';
 import GlobalStyle from './containers';
 import "../../assets/css/app.css"
 import AppMenu from '../common/AppMenu';
+import Search from '../../pages/Search';
+import { useSelector } from 'react-redux';
+import { findUserAction } from '../../utils/helpers';
+import { useEffect } from 'react';
 
-const AppContainer = ({component}, page) => {
+const AppContainer = ({component, page, action = "common"}) => {
+
+    const user_info = useSelector(state => state.user)
+
 
     return ( 
       <Box>
           <ResetCSS/>
           <GlobalStyle/> 
-          <AppMenu component={component} page={page}/> 
+          {
+            action !== "common" && findUserAction(user_info.role.actions || [], action || []) ? 
+                <AppMenu component={component} page={page}/> : 
+            action === "common" || action === undefined?
+                <AppMenu component={component} page={page}/> : 
+            <AppMenu component={<Search />} page={"Buscador"}/> 
+          }
       </Box> 
      );
 }
