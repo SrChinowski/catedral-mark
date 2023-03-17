@@ -13,9 +13,9 @@ export const getItemInfoService = (adminURL, itemId) =>
 .then(({data}) => data);
 
 export const postItemUpdateService = (itemId, itemMarcId, query, data) => 
-    api.post(`/items/${itemId}/${itemMarcId}/update?${query}`,data)
+    api.put(`items/${itemId}/${itemMarcId}/update?${query}`,data)
 .then(({data}) => data);
 
 export const deleteItemService = (itemId, query) => 
-    api.delete(`/api/items/${itemId}/delete?${query}`)
+    api.delete(`items/${itemId}/delete?${query}`)
 .then(({data}) => data);

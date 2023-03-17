@@ -17,6 +17,7 @@ import AppContainer from './components/containers/AppContainer';
 // import UserPage from "./pages/User"
 import Search from './pages/Search';
 import ItemUpdate from './components/common/Item/ItemUpdate';
+import ItemCreate from './components/common/Item/ItemCreate';
 
 
 
@@ -34,6 +35,10 @@ ReactDOM.render(
 
 			  <Route path='/item/:item_id/update' element={ 
           <PrivateRoute component={<AppContainer component={<ItemUpdate/> } page={"item update"} action={"common"}/>} />
+        } exact />
+
+        <Route path='/items/create' element={ 
+          <PrivateRoute component={<AppContainer component={<ItemCreate/> } page={"item create"} action={"items_create"}/>} />
         } exact />
 
       </Routes>

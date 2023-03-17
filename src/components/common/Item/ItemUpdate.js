@@ -45,6 +45,7 @@ const ItemUpdate = () => {
 
 	const saveItem = (e) => {
 		e.preventDefault();
+		console.log(item_id, itemInfo._id, { item_type: item_info?.itemType }, itemInfo)
 		dispatch(update_item(item_id, itemInfo._id, { item_type: item_info?.itemType }, itemInfo));
 	}
 

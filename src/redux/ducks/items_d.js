@@ -23,6 +23,7 @@ const create_query_params = (filters) => {
 		query_params = query_params + `${f}=${filters[f]}&`;
 	})
 
+    console.log(query_params)
 	return query_params;
 }
 
@@ -95,7 +96,7 @@ export const update_item = (itemId = '', itemMarcId = '', filters = {}, itemInfo
     })
     .catch((e) => {
         dispatch(postItemUpdate.stopFetch(false, {error: 'Error al actualizar item'}))
-        console.log('[ update_item ]', e.response.data.error)   
+        console.log('[ update_item ]', e)   
     })
 }
 
