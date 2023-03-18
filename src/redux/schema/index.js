@@ -2,7 +2,8 @@ export const AppSchema = {
     token: "",
     users_list: [],
     statuses: [],
-    errors: {}
+    errors: {},
+    roles:[]
 }
 
 export const LoginSchema = {

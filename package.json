@@ -22,6 +22,7 @@
     "polished": "^4.2.2",
     "react": "^16.14.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
+    "react-avatar": "^5.0.3",
     "react-bootstrap": "^2.7.2",
     "react-dom": "^16.14.0",
     "react-icons-kit": "^2.0.0",

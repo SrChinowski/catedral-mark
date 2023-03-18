@@ -17,3 +17,11 @@ export const userInfoService = (id) => api.get(`user/${id}/info`)
 
 export const createUserService = (id) => api.get(`users/signup`)
 .then(({data}) => data);
+
+export const get_all_rolesService = () => api.get('roles/all')
+.then(({data} )=> data);
+
+export const get_all_admin_usersService = () => api.get('users/all')
+.then(({data} )=> data);
+
+

@@ -3,7 +3,7 @@ import Status from "../../utils/status";
 import { Write } from "../../utils/write";
 import { AppSchema } from "../schema";
 import { appLoginService } from "../services/app_d";
-import { createUserService, deleteUsersService, disableUserdervice, getAllusersService, updateUserService, userInfoService } from "../services/user_d";
+import { createUserService, deleteUsersService, disableUserdervice, getAllusersService, get_all_rolesService, updateUserService, userInfoService } from "../services/user_d";
 
 const PREFIX = 'APP';
 const SET_VALUE = 'SET_VALUE';
@@ -169,6 +169,27 @@ export const createUser = () => (dispatch, getState) => { //ONLY GOD/ADMIN
         })
 
 }
+
+export const get_all_roles = () => (dispatch, getState) => { //ONLY GOD/ADMIN
+
+    const all_roles = Status({reducer: 'app', status: 'USER_ROLES'});
+
+    dispatch(all_roles.startFetch());
+
+    return get_all_rolesService()
+        .then(({n_roles, roles}) => {
+            dispatch(App.setValue('', {
+                roles: roles
+            },'root'))
+            dispatch(all_roles.stopFetch())
+        })
+        .catch((e) => {
+            dispatch(all_roles.stopFetch(false, {error: 'Error al obtener información de usuarios'}))
+            console.log('[ getAllUsers ]', e.response.data.error)   
+        })
+
+}
+
 
 //Reducer
 export default function reducer(state = initialState, action){
