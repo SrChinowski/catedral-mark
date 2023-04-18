@@ -20,6 +20,7 @@ import ItemUpdate from './components/common/Item/ItemUpdate';
 import ItemCreate from './components/common/Item/ItemCreate';
 import Users from './components/common/Users/Users';
 import { UserInfo } from './redux/ducks/app_d';
+import ItemInfo from './components/common/Item/ItemInfo';
 
 
 
@@ -37,6 +38,10 @@ ReactDOM.render(
 
 			  <Route path='/item/:item_id/update' element={ 
           <PrivateRoute component={<AppContainer component={<ItemUpdate/> } page={"item update"} action={"common"}/>} />
+        } exact />
+
+			  <Route path='/item/:item_id/info' element={ 
+          <PrivateRoute component={<AppContainer component={<ItemInfo/> } page={"item info"} action={"common"}/>} />
         } exact />
 
         <Route path='/items/create' element={ 
