@@ -23,9 +23,11 @@ const AppMenu = ({component}, page) => {
                 />
                 <span style={{marginBottom: '40px'}}></span>
                 {menuItems.map((item) => 
-                    <Menuitem style={item.name === page ? {backgroundColor: "antiquewhite"} : {backgroundColor: "none"}} key={item.name}>
-                        <span style={{marginRight: "10px"}}>{item.icon}</span>
-                        <Text content={item.name} />
+                    <Menuitem href={item.link} style={item.name === page ? {backgroundColor: "antiquewhite"} : {backgroundColor: "none"}} key={item.name}>
+                        <a href={item.link} style={{display: "flex", color: "#6c757d "}}>
+                            <span style={{marginRight: "10px"}}>{item.icon}</span>
+                            <Text content={item.name} />
+                        </a>
                     </Menuitem>
                 )}
             </CardMenu>

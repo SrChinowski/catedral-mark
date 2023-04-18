@@ -647,7 +647,7 @@ export const appMenuItems = {
               <Icon icon={search} />
             </div>,
       name: 'Buscador',
-      link: '/',
+      link: '/app',
       rol: ['COMMON', 'ADMIN']
     },
     {
@@ -665,7 +665,7 @@ export const appMenuItems = {
               <Icon icon={ic_library_add_outline} />
             </div>,
       name: 'Agregar Items',
-      link: '/users',
+      link: '/items/create',
       rol: ['ADMIN']
     },
   ]

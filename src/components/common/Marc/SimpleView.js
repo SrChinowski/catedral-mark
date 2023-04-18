@@ -57,7 +57,7 @@ const SimpleView = (props) => {
 			</Container>
 		)
 	}
-    else return ( <h1></h1>)
+    else return ( <h1>error</h1>)
 }
 
 SimpleView.propTypes = {

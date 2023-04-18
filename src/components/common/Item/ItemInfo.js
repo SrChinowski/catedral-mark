@@ -20,7 +20,6 @@ const ItemInfo = () => {
 	const dispatch = useDispatch();
 
     const user_actions = useSelector(state => state.user.role.actions)
-    const user_info = useSelector(state => state.user)
 
 	const { item_info } = useSelector(state => state.items);
 	
