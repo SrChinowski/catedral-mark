@@ -25,11 +25,7 @@ const Users = () => {
 
 	useEffect(() => {
 		dispatch(getAllUsers());
-	}, []);
-
-    useEffect(() => {
-		console.log(all_users)
-	}, [all_users]);
+	}, []); //eslint-disable-line
 
 	const avatarColor = { god: '#6f42c1', admin: '#0d6efd' };
 

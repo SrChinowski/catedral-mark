@@ -28,7 +28,7 @@ const UserCreate = (props) => {
 
 	useEffect(() => {
 		dispatch(get_all_roles());
-	}, []);
+	}, []); //eslint-disable-line
 
 	const validateUserInfo = userInfo.name === '' || userInfo.username === '' || userInfo.email === '' || userInfo.role === '';
 
