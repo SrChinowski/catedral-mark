@@ -92,11 +92,11 @@ const Users = () => {
 									<td className='align-middle'>{user.role}</td>
 									<td className='align-middle'>{new Date(user.createdAt).toLocaleString('es-MX')}</td>
 									<td className='align-middle'>
-										<Button className='btn-item-action'>
-											<i className='bi bi-arrow-clockwise me-2 fs-5'></i>
+										<Button className='btn-item-action' style={{marginRight: "5px"}}>
+											<i className='bi bi-arrow-clockwise me-2 fs-5' style={{marginRight: "0px !important"}}></i>
 										</Button>
 										<Button className='btn-item-action' onClick={() => handleDialogFunctions(user._id)}>
-											<i className='bi bi-trash3 me-2 fs-5'></i>
+											<i className='bi bi-trash3 me-2 fs-5' style={{marginRight: "0px !important"}}></i>
 										</Button>
 									</td>
 								</tr>

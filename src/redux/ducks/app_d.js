@@ -3,7 +3,7 @@ import Status from "../../utils/status";
 import { Write } from "../../utils/write";
 import { AppSchema } from "../schema";
 import { appLoginService } from "../services/app_d";
-import { createUserService, deleteUsersService, disableUserdervice, getAllusersService, get_all_rolesService, updateUserService, userInfoService } from "../services/user_d";
+import { createUserService, deleteUsersService, disableUserdervice, getAllusersService, get_all_rolesService, get_user_signupService, updateUserService, userInfoService } from "../services/user_d";
 
 const PREFIX = 'APP';
 const SET_VALUE = 'SET_VALUE';
@@ -69,7 +69,7 @@ export const getAllUsers = () => (dispatch, getState) => { //ONLY GOD/ADMIN
 
 }
 // DeleteUsers
-export const deleteUsers = (id) => (dispatch, getState) => { //ONLY GOD/ADMIN
+export const deleteUsers = (id = "", setShowDialog) => (dispatch, getState) => { //ONLY GOD/ADMIN
 
     const deleteUsers = Status({reducer: 'app', status: 'DELETE_USERS'});
 
@@ -77,14 +77,13 @@ export const deleteUsers = (id) => (dispatch, getState) => { //ONLY GOD/ADMIN
 
     return deleteUsersService(id)
         .then(({n_users, users}) => {
-            dispatch(App.setValue('', {
-                users_list: users
-            },'root'))
+            setShowDialog(false);
+            dispatch(getAllUsers());
             dispatch(deleteUsers.stopFetch())
         })
         .catch((e) => {
             dispatch(deleteUsers.stopFetch(false, {error: 'Error al elimiar usuario'}))
-            console.log('[ deleteUsers ]', e.response.data.error)   
+            console.log('[ deleteUsers ]', e)   
         })
 
 }
@@ -190,6 +189,30 @@ export const get_all_roles = () => (dispatch, getState) => { //ONLY GOD/ADMIN
 
 }
 
+export const post_user_signup = (user_info = {}, create = false, resetForm)  => (dispatch, getState) => { //ONLY GOD/ADMIN
+
+    const user_signup = Status({reducer: 'app', status: 'CREATE_USER'});
+
+    dispatch(user_signup.startFetch());
+
+    return get_user_signupService(user_info)
+        .then((data) => {
+            if(create) {
+                resetForm()
+                dispatch(getAllUsers());
+                dispatch(user_signup.stopFetch())
+            }
+            else {
+                dispatch(user_signup.stopFetch())
+                window.location.href = '/login';
+            }
+        })
+        .catch((e) => {
+            dispatch(user_signup.stopFetch(false, {error: 'Error al crear usuario'}))
+            console.log('[ post_user_signup ]', e.response.data.error)   
+        })
+
+}
 
 //Reducer
 export default function reducer(state = initialState, action){

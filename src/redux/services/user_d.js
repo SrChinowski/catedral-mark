@@ -3,7 +3,7 @@ import api from "./api";
 export const getAllusersService = () => api.get('users/all')
 .then(({data}) => data);
 
-export const deleteUsersService = (id) => api.get(`users/${id}/delete`)
+export const deleteUsersService = (id) => api.delete(`users/${id}/delete`)
 .then(({data}) => data);
 
 export const updateUserService = (id) => api.get(`users/${id}/update`)
@@ -24,4 +24,6 @@ export const get_all_rolesService = () => api.get('roles/all')
 export const get_all_admin_usersService = () => api.get('users/all')
 .then(({data} )=> data);
 
+export const get_user_signupService = (data) => api.post('users/signup', data)
+.then(({data} )=> data);
 

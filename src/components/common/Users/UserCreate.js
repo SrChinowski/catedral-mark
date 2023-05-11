@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 import CustomAlert from '../utils/CustomAlert';
 
 // Utils
-import { get_all_roles } from '../../../redux/ducks/app_d';
+import { get_all_roles, post_user_signup } from '../../../redux/ducks/app_d';
 
 const UserCreate = (props) => {
 	const { show, onHide } = props;
@@ -47,7 +47,7 @@ const UserCreate = (props) => {
 		}
 		setAlert(alertInitialState);
 
-		dispatch(UserCreate(userInfo, true, resetForm));
+		dispatch(post_user_signup(userInfo, true, resetForm));
 	}
 
 	return (
