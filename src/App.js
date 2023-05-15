@@ -15,6 +15,8 @@ import GlobalStyle, { AppWrapper } from './components/containers/containers';
 import { theme } from './utils/constants/common';
 
 function App() {
+
+  console.log("[ v1.0 ] - Saken los Azulitos")
   return (
     <ThemeProvider theme={theme}>
         <ResetCSS />
