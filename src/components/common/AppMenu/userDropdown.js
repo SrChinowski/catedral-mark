@@ -10,7 +10,8 @@ const UserDropdown = () => {
     const user_info = useSelector(state => state.user)
 
     const handleLogOut = () => {
-        console.log("cerrar sesion")
+        localStorage.removeItem('catedralToken')
+        window.location.href = '/login';
     }
 
     return ( 

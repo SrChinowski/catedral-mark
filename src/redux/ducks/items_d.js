@@ -52,7 +52,7 @@ export const item_create = (filters = {}, itemInfo = {}) => (dispatch, getState)
     const postItemCreate = Status({reducer: 'items', status: 'POST_ITEMS_CREATE'});
     dispatch(postItemCreate.startFetch());
 
-    return postItemCreateService(create_query_params(filters))
+    return postItemCreateService(create_query_params(filters), itemInfo)
     .then((res) => {
         window.location.href = '/app';
         dispatch(postItemCreate.stopFetch())
@@ -108,7 +108,11 @@ export const delete_item = (itemId = '', filters = {}, setShowDialog = {}, retur
     return deleteItemService(itemId, create_query_params(filters))
     .then((res) => {
         window.location.href = '/app';
+        setShowDialog(false);
+		dispatch(get_all_items(filters));
         dispatch(deleteItem.stopFetch())
+
+        if (returnToItems) window.location.href =  '/search';
     })
     .catch((e) => {
         dispatch(deleteItem.stopFetch(false, {error: 'Error al eliminar item'}))
