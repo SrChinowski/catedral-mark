@@ -27,7 +27,7 @@ const Search = () => {
 	const [searchBy, setSearchBy] = useState('');
 	const [searchString, setSearchString] = useState('');
 	const [showDialog, setShowDialog] = useState(false);
-	const [selectedItem, setSelectedItem] = useState('');
+	const [selectedItem, setSelectedItem] = useState({ id: '', type: '' });
 
 	const searchByOptions = [{ label: 'Título', value: 'title'}, { label: 'Autor', value: 'author'}, { label: 'Edición', value: 'edition'}, { label: 'ISBN', value: 'isbn'}]
     
@@ -50,8 +50,8 @@ const Search = () => {
 		window.location.href = `/item/${itemId}/info`;
 	}
 
-	const handleDialogFunctions = (itemId) => {
-		setSelectedItem(itemId)
+	const handleDialogFunctions = (itemId, itemType) => {
+		setSelectedItem({ id: itemId, type: itemType });
 		setShowDialog(true);
 	}
 
@@ -69,7 +69,7 @@ const Search = () => {
 			<ConfirmDialog 
 				show={showDialog}
 				onHide={() => setShowDialog(false)}
-				confirmFunction={() => dispatch(delete_item(selectedItem, { item_type: itemToSearch }, setShowDialog))}
+				confirmFunction={() => dispatch(delete_item(selectedItem.id, { itemType: selectedItem.type }, setShowDialog))}
 			/>
 
 			<h1 className='text-center'>Búsqueda</h1>
@@ -133,7 +133,7 @@ const Search = () => {
 														<Link className='btn-item-action' to={`/item/${item._id}/update`}>
 															<i className='bi bi-arrow-clockwise me-2'></i>Actualizar
 														</Link>
-														<Button className='btn-item-action' onClick={() => handleDialogFunctions(item._id)}>
+														<Button className='btn-item-action' onClick={() => handleDialogFunctions(item._id, item.itemType)}>
 															<i className='bi bi-trash3 me-2'></i>Eliminar
 														</Button>
 													</Fragment>
