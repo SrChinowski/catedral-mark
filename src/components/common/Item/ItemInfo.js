@@ -36,7 +36,7 @@ const ItemInfo = () => {
 			<ConfirmDialog 
 				show={showDialog}
 				onHide={() => setShowDialog(false)}
-				confirmFunction={() => dispatch(delete_item(item_info?._id, { item_type: item_info?.itemType }, setShowDialog, true))}
+				confirmFunction={() => dispatch(delete_item(item_info?._id, { itemType: item_info?.itemType }, setShowDialog, true))}
 			/>
 
 			<Row>
