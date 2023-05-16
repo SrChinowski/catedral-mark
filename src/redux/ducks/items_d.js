@@ -112,7 +112,7 @@ export const delete_item = (itemId = '', filters = {}, setShowDialog = {}, retur
 		dispatch(get_all_items(filters));
         dispatch(deleteItem.stopFetch())
 
-        if (returnToItems) window.location.href =  '/search';
+        if (returnToItems) window.location.href =  '/app';
     })
     .catch((e) => {
         dispatch(deleteItem.stopFetch(false, {error: 'Error al eliminar item'}))
