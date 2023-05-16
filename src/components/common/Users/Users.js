@@ -88,7 +88,7 @@ const Users = () => {
 									<td className='align-middle'>{user.role}</td>
 									<td className='align-middle'>{new Date(user.createdAt).toLocaleString('es-MX')}</td>
 									<td className='align-middle'>
-										<Button className='btn-item-action' onClick={() => window.location.href(`/user/${user._id}/info`)}>
+									<Button className='btn-item-action' onClick={() => window.location.href = `/user/${user._id}/info`}>
 											<i className='bi bi-arrow-clockwise me-2 fs-5' style={{marginRight: "0px !important"}}></i>
 										</Button>
 										<Button className='btn-item-action' onClick={() => handleDialogFunctions(user._id)}>
