@@ -39,7 +39,7 @@ const ItemCreate = () => {
 
 	const saveItem = (e) => {
 		e.preventDefault();
-		dispatch(item_create({ item_type: itemType }, itemInfo));
+		dispatch(item_create({ itemType: itemType }, itemInfo));
 	}
 
 	return (
