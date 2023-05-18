@@ -96,6 +96,22 @@ module.exports = [
 		]
 	},
 	{
+		number: "084",
+		name: "Otro Número de Clasificación",
+		value: "qualiNumber",
+		indexes: [
+			{ label: "Índice 1", value: "ind1" },
+			{ label: "Índice 2", value: "ind2" }
+		],
+		subfields: [
+			{ label: "$a Número clasificador", value: "a" },
+			{ label: "$b Número del ítem", value: "b" },
+			{ label: "$2 Fuente del número", value: "two" },
+			{ label: "$6 Enlace", value: "six" },
+			{ label: "$8 Vínculo de campo y número de secuencia", value: "eight" }
+		]
+	},
+	{
 		number: "100",
 		name: "Asiento Principal - Nombre Personal",
 		value: "primaryName",
@@ -328,6 +344,28 @@ module.exports = [
 			{ label: "$b Código del tipo de contenido", value: "b" },
 			{ label: "$2 Fuente del término", value: "two" },
 			{ label: "$3 Especificación de los materiales", value: "three" }
+		]
+	},
+	{
+		number: "340",
+		name: "Medio Físico",
+		value: "physicalEnv",
+		indexes: [
+			{ label: "Índice 1", value: "ind1" },
+			{ label: "Índice 2", value: "ind2" }
+		],
+		subfields: [
+			{ label: "$a Base material y configuración", value: "a" },
+			{ label: "$b Dimensiones", value: "b" },
+			{ label: "$c Materiales aplicados a la superficie", value: "c" },
+			{ label: "$d Técnica de registro de la información", value: "d" },
+			{ label: "$e Soporte", value: "e" },
+			{ label: "$f Coeficiente/proporción de producción", value: "f" },
+			{ label: "$h Localización dentro del medio", value: "h" },
+			{ label: "$i Especificaciones técnicas del medio físico", value: "i" },
+			{ label: "$3 Especificación de los materiales", value: "three" },
+			{ label: "$6 Enlace", value: "six" },
+			{ label: "$8 Vínculo de campo y número de secuencia", value: "eight" }
 		]
 	},
 	{
