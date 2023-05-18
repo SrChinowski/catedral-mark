@@ -71,7 +71,7 @@ const ItemCreate = () => {
 						{itemInfo.physicalDesc !== undefined &&
 							<Fragment>
 								<ItemTag
-									title='Campo de Descripción Física'
+									title='007 - Campo de Descripción Física'
 									tagKey='physicalDesc'
 									itemFields={itemFields.data.physicalDesc}
 									itemInfo={itemInfo}
@@ -83,7 +83,7 @@ const ItemCreate = () => {
 						{itemInfo.itemTags !== undefined &&
 							<Fragment>
 								<ItemTag
-									title={itemFields.label}
+									title={`008 - ${itemFields.label}`}
 									tagKey='itemTags'
 									itemFields={itemFields.data.itemTags}
 									itemInfo={itemInfo}
