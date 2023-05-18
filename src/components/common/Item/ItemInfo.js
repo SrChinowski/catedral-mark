@@ -23,7 +23,7 @@ const ItemInfo = () => {
 
 	const { item_info } = useSelector(state => state.items);
 	
-	const [view, setView] = useState('normal');
+	const [view, setView] = useState('marc');
 	const [viewValue, setViewValue] = useState('simple-view-marc');
 	const [showDialog, setShowDialog] = useState(false);
 
