@@ -6,7 +6,7 @@ export const getAllusersService = () => api.get('users/all')
 export const deleteUsersService = (id) => api.delete(`users/${id}/delete`)
 .then(({data}) => data);
 
-export const updateUserService = (id) => api.get(`users/${id}/update`)
+export const updateUserService = (id, userInfo) => api.put(`users/${id}/update`, userInfo)
 .then(({data}) => data);
 
 export const disableUserdervice = (id) => api.get(`users/${id}/disable`)

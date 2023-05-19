@@ -89,17 +89,15 @@ export const deleteUsers = (id = "", setShowDialog) => (dispatch, getState) => {
 }
 
 //UpdateUser
-export const UpdateUser = (id) => (dispatch, getState) => { //ONLY GOD/ADMIN
+export const UpdateUser = (id, userInfo) => (dispatch, getState) => { //ONLY GOD/ADMIN
 
     const UpdateUser = Status({reducer: 'app', status: 'UPDATE_USERS'});
 
     dispatch(UpdateUser.startFetch());
 
-    return updateUserService(id)
-        .then(({n_users, users}) => {
-            dispatch(App.setValue('', {
-                users_list: users
-            },'root'))
+    return updateUserService(id, userInfo)
+        .then((r) => {
+            console.log(r)
             dispatch(UpdateUser.stopFetch())
         })
         .catch((e) => {

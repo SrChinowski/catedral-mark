@@ -22,7 +22,7 @@ const UserDropdown = () => {
             active
         >
             <Fragment>
-                <NavDropdown.Item href={`/user/${"user.user._id"}/info`}>
+                <NavDropdown.Item href={`/user/${user_info.id}/info`}>
                     Registrado como<br/><b>{user_info.username}</b>
                 </NavDropdown.Item>
                 {findUserAction(user_actions, 'items_create') &&

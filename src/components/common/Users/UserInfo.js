@@ -11,6 +11,8 @@ import Avatar from 'react-avatar';
 // Components
 import CustomAlert from '../utils/CustomAlert';
 import { isEmpty } from '../../../utils/helpers';
+import { updateUserService } from '../../../redux/services/user_d';
+import { UpdateUser } from '../../../redux/ducks/app_d';
 
 // Actions
 
@@ -61,7 +63,7 @@ const UserInfo = () => {
 			userInfo = { ...userInfo, password, confirm };
 		}
 		
-		dispatch(updateUser(user_id, userInfo));
+		dispatch(UpdateUser(user_id, userInfo));
 	}
 
 	return (
