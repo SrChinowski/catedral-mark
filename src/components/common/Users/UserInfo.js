@@ -11,7 +11,6 @@ import Avatar from 'react-avatar';
 // Components
 import CustomAlert from '../utils/CustomAlert';
 import { isEmpty } from '../../../utils/helpers';
-import { updateUserService } from '../../../redux/services/user_d';
 import { UpdateUser } from '../../../redux/ducks/app_d';
 
 // Actions
@@ -38,7 +37,7 @@ const UserInfo = () => {
 		if (!isEmpty(user_info)) {
 			setUpdateUserInfo({ ...updateUserInfo, name: user_info.name, username: user_info.username, email: user_info.email });
 		}
-	}, [user_info]);
+	}, [user_info]); //eslint-disable-line
 
 	const avatarColor = { god: '#6f42c1', admin: '#0d6efd' };
 

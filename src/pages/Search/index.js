@@ -19,8 +19,6 @@ import itemsSelector from "../../utils/constants/itemsJSONs/itemsSelector.json"
 const Search = () => {
 	const dispatch = useDispatch();
 
-    const { user } = useSelector(state => state)
-
 	const { n_items , items } = useSelector(state => state.items);
 
 	const [itemToSearch, setItemToSearch] = useState('');
@@ -37,11 +35,11 @@ const Search = () => {
     //USEEFFECT
 	useEffect(() => {
 		dispatch(get_all_items({}));
-	}, []);
+	}, []); //eslint-disable-line
 
 	useEffect(() => {
 		searchItems(itemToSearch);
-	}, [itemToSearch]);
+	}, [itemToSearch]); //eslint-disable-line
 
 
     //HELPERS

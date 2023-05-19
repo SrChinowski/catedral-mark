@@ -30,7 +30,7 @@ const ItemCreate = () => {
 			setItemFields(itemFound);
 
 			let itemObj = {};
-			Object.keys(itemFound.data).map((key) => {
+			Object.keys(itemFound.data).map((key) => { //eslint-disable-line
 				itemObj = { ...itemObj, [`${key}`]: {}}
 			})
 			setItemInfo(itemObj);
