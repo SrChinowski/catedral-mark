@@ -212,6 +212,33 @@ export const post_user_signup = (user_info = {}, create = false, resetForm)  => 
 
 }
 
+export const post_user_register = (user_info = {}, create = false, resetForm)  => (dispatch, getState) => { //ONLY GOD/ADMIN
+
+    const user_signup = Status({reducer: 'app', status: 'CREATE_USER'});
+
+    dispatch(user_signup.startFetch());
+
+    return get_user_signupService(user_info)
+        .then((data) => {
+            console.log(data)
+            if(data.msg === "Registered user successfully")
+            {
+                dispatch(appLogin(user_info.email, user_info.password))
+                
+                setTimeout(window.location.href = '/app', 1200)
+                dispatch(user_signup.stopFetch())
+            }
+            else {
+                dispatch(user_signup.stopFetch(false, {error: data.msg}))
+            }
+        })
+        .catch((e) => {
+            dispatch(user_signup.stopFetch(false, {error: 'Error al crear usuario'}))
+            console.log('[ post_user_signup ]', e.response.data.error)   
+        })
+
+}
+
 //Reducer
 export default function reducer(state = initialState, action){
     switch(action.type){
