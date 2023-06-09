@@ -13,7 +13,9 @@ import ItemTag from '../tags/ItemTag';
 
 // Utils
 import itemsSelector from '../../../utils/constants/itemsJSONs/itemsSelector.json';
-import { item_create } from '../../../redux/ducks/items_d';
+import { get_templates, item_create } from '../../../redux/ducks/items_d';
+import { findTagByNumber } from '../utils/CreateTagValues';
+import { useSelector } from 'react-redux';
 
 const ItemCreate = () => {
 	const dispatch = useDispatch();
@@ -22,8 +24,36 @@ const ItemCreate = () => {
 	const [itemFields, setItemFields] = useState({});
 	const [itemInfo, setItemInfo] = useState({});
 
+	const template_tags = useSelector(state => state.items.tags)
+
+	useEffect(() => {
+		if (template_tags && template_tags?.length !== 0) {
+            let _itemInfo = { ...itemInfo };
+
+            template_tags.map(t_tag => { //eslint-disable-line
+                const foundTag = findTagByNumber(t_tag?.number);
+                _itemInfo['tags'][foundTag?.value] = [];
+
+                let tagInfo = {};
+                foundTag?.indexes.map(index => { //eslint-disable-line
+                    tagInfo[index.value] = '';
+                });
+
+                tagInfo.subfields = {};
+                t_tag?.subfields.map(subfield => { //eslint-disable-line
+                    tagInfo.subfields[`${subfield.key}`] = subfield.value;
+                });
+
+                _itemInfo['tags'][foundTag?.value].push(tagInfo);
+            });
+
+            setItemInfo(_itemInfo);
+        }
+    }, [template_tags]); //eslint-disable-line
+ 
 	useEffect(() => {
 		if (itemType !== '') {
+			dispatch(get_templates({"itemType": itemType}));
 			localStorage.setItem('itemType', itemType);
 			
 			const itemFound = itemsSelector.find(item => item.itemType === itemType);
@@ -35,7 +65,7 @@ const ItemCreate = () => {
 			})
 			setItemInfo(itemObj);
 		}
-	}, [itemType]);
+	}, [itemType]); //eslint-disable-line
 
 	const saveItem = (e) => {
 		e.preventDefault();
@@ -45,11 +75,11 @@ const ItemCreate = () => {
 	return (
 		<Container className='p-3' fluid>
 			<Container className='p-0 mb-4'>
-				<h1 className='text-center'>Crear Item</h1>
+				<h1 className='text-center'>Crear Artículo</h1>
 
 				<Form>
 					<Form.Group as={Col} controlId='formGridState'>
-						<Form.Label>Selecciona un Item</Form.Label>
+						<Form.Label>Selecciona un Artículo</Form.Label>
 						<Form.Select defaultValue='Elegir...' onChange={(e) => setItemType(e.target.value)}>
 							<option value=''>Elegir...</option>
 							{itemsSelector.map((item) => (
@@ -100,7 +130,7 @@ const ItemCreate = () => {
 						/>
 						<div className='d-grid gap-2 mx-2 my-4'>
 							<Button variant='success' onClick={(e) => saveItem(e)}>
-								Guardar Item
+								Guardar Artículo
 							</Button>
 						</div>
 					</Fragment>

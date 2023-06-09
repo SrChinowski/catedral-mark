@@ -29,7 +29,7 @@ const UserDropdown = () => {
                     <Fragment>
                         <NavDropdown.Divider />
                         <NavDropdown.Item href='/items/create'>
-                            <i className='bi bi-plus-circle me-2'></i>Crear Item 
+                            <i className='bi bi-plus-circle me-2'></i>Crear Artículo 
                         </NavDropdown.Item>
                     </Fragment>
                 }

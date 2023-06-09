@@ -51,7 +51,7 @@ const ItemUpdate = () => {
 
 	return (
 		<Container className='p-3' fluid>
-			<h1 className='text-center'>Actualizar Item</h1>
+			<h1 className='text-center'>Actualizar Artículo</h1>
 			
 			<Leader
 				itemInfo={itemInfo}
@@ -92,7 +92,7 @@ const ItemUpdate = () => {
 
 			<div className='d-grid gap-2 mx-2 my-4'>
 				<Button variant='success' onClick={(e) => saveItem(e)}>
-					Actualizar Item
+					Actualizar Artículo
 				</Button>
 			</div>
 		</Container>

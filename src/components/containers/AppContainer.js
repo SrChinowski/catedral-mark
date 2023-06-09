@@ -7,15 +7,15 @@ import AppMenu from '../common/AppMenu';
 import Search from '../../pages/Search';
 import { useSelector } from 'react-redux';
 import { findUserAction } from '../../utils/helpers';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 const AppContainer = ({component, page, action = "common"}) => {
 
     const user_info = useSelector(state => state.user)
 
-    useEffect(() => {
-        console.log(user_info.role.actions, action, page)
-    }, [])
+    // useEffect(() => {
+    //     console.log(user_info.role.actions, action, page)
+    // }, [])
 
     return ( 
       <Box>

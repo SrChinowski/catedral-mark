@@ -7,7 +7,8 @@ import {
     postItemCreateService, 
     getItemInfoService,
     postItemUpdateService,
-    deleteItemService
+    deleteItemService,
+    get_templatesService
 } from "../services/items_d";
 const PREFIX = 'ITEMS';
 const SET_VALUE = 'SET_VALUE';
@@ -22,8 +23,6 @@ const create_query_params = (filters) => {
 	Object.keys(filters).forEach((f) => {
 		query_params = query_params + `${f}=${filters[f]}&`;
 	})
-
-    console.log(query_params)
 	return query_params;
 }
 
@@ -46,6 +45,24 @@ export const get_all_items = (filters = {}) => (dispatch, getState) => {
     })
 }
 
+export const get_templates = (filters = {}) => (dispatch, getState) => {
+
+    const get_templates = Status({reducer: 'items', status: 'GET_TEMPLATE'});
+    dispatch(get_templates.startFetch());
+
+    return get_templatesService(create_query_params(filters))
+    .then(({itemType, tags}) => {
+        dispatch(Items.setValue('', {
+            itemType: itemType,
+            tags: tags
+        },'root'))
+        dispatch(get_templates.stopFetch())
+    })
+    .catch((e) => {
+        dispatch(get_templates.stopFetch(false, {error: 'Error al obtener templates'}))
+        console.log('[ get_templates ]', e.response.data.error)   
+    })
+}
 //CRUD
 export const item_create = (filters = {}, itemInfo = {}) => (dispatch, getState) => {
 
@@ -58,7 +75,7 @@ export const item_create = (filters = {}, itemInfo = {}) => (dispatch, getState)
         dispatch(postItemCreate.stopFetch())
     })
     .catch((e) => {
-        dispatch(postItemCreate.stopFetch(false, {error: 'Error al crear item'}))
+        dispatch(postItemCreate.stopFetch(false, {error: 'Error al crear Artículo'}))
         console.log('[ item_create ]', e.response.data.error)   
     })
 }
@@ -79,7 +96,7 @@ export const get_item_info = (userActions, itemId = '') => (dispatch, getState) 
         dispatch(getItemInfo.stopFetch())
     })
     .catch((e) => {
-        dispatch(getItemInfo.stopFetch(false, {error: 'Error al obtener info del item'}))
+        dispatch(getItemInfo.stopFetch(false, {error: 'Error al obtener info del Artículo'}))
         console.log('[ get_item_info ]', e.response.data.error)   
     })
 }
@@ -95,7 +112,7 @@ export const update_item = (itemId = '', itemMarcId = '', filters = {}, itemInfo
         dispatch(postItemUpdate.stopFetch())
     })
     .catch((e) => {
-        dispatch(postItemUpdate.stopFetch(false, {error: 'Error al actualizar item'}))
+        dispatch(postItemUpdate.stopFetch(false, {error: 'Error al actualizar Artículo'}))
         console.log('[ update_item ]', e)   
     })
 }
@@ -115,10 +132,12 @@ export const delete_item = (itemId = '', filters = {}, setShowDialog = {}, retur
         if (returnToItems) window.location.href =  '/app';
     })
     .catch((e) => {
-        dispatch(deleteItem.stopFetch(false, {error: 'Error al eliminar item'}))
+        dispatch(deleteItem.stopFetch(false, {error: 'Error al eliminar Artículo'}))
         console.log('[ delete_item ]', e.response.data.error)   
     })
 }
+
+
 
 export default function reducer(state = initialState, action){
     switch(action.type){

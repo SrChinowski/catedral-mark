@@ -31,4 +31,9 @@ const findSubfields = (tag, subfieldKey) => {
 	return subfieldFound;
 }
 
-export { createLeaderTag, createControlField, findTag, findSubfields };
+const findTagByNumber = (number) => {
+    const tagFound = tagsJSON.find(t => t.number === number);
+    return tagFound;
+}
+
+export { createLeaderTag, createControlField, findTag, findSubfields, findTagByNumber };

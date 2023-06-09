@@ -19,3 +19,7 @@ export const postItemUpdateService = (itemId, itemMarcId, query, data) =>
 export const deleteItemService = (itemId, query) => 
     api.delete(`items/${itemId}/delete?${query}`)
 .then(({data}) => data);
+
+export const get_templatesService = (query) => 
+    api.get(`/templates/data?${query}`)
+.then(({data}) => data);

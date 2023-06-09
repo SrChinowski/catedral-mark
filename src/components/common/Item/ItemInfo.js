@@ -41,7 +41,7 @@ const ItemInfo = () => {
 
 			<Row>
 				<Col>
-					Imagen del Item
+					Imagen del Artículo
 				</Col>
 				<Col xs={10}>
 					<Row>

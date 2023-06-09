@@ -12,6 +12,7 @@ import Tag from './Tag';
 // Utils
 import tagsJSON from '../../../utils/constants/itemsJSONs/tags';
 import { isEmpty } from '../../../utils/helpers';
+import { findTagByNumber } from '../utils/CreateTagValues';
 
 const Tags = (props) => {
 	const { itemInfo, tags, setItemInfo, create } = props;
@@ -68,7 +69,7 @@ const Tags = (props) => {
 													variant={selectedTag.name === tag.name ? 'primary' : null}
 													onClick={(e) => { e.preventDefault(); setSelectedTag(tag); }}
 												>
-													{tag.number} - {tag.name}
+													{tag.number} - {tag.name} {itemInfo.tags !== undefined && itemInfo.tags[findTagByNumber(tag.number)?.value] && <i className='bi bi-circle-fill text-danger'></i>}
 												</ListGroup.Item>
 											))}
 										</ListGroup>

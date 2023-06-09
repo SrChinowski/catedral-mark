@@ -664,7 +664,7 @@ export const appMenuItems = {
       icon: <div style={{ color: '#6d6c6f' }}>
               <Icon icon={ic_library_add_outline} />
             </div>,
-      name: 'Agregar Items',
+      name: 'Agregar Artículo',
       link: '/items/create',
       rol: ['ADMIN']
     },

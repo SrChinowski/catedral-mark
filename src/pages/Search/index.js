@@ -97,7 +97,7 @@ const Search = () => {
 				</Row>
 				<Form.Group as={Col} controlId='formGridState'>
 					<div className='text-center'>
-						<Form.Label><i className='bi bi-filter me-2'></i> Tipo de Item</Form.Label>
+						<Form.Label><i className='bi bi-filter me-2'></i> Tipo de Artículo</Form.Label>
 					</div>
 					<Form.Select defaultValue='Elegir...' value={itemToSearch} onChange={(e) => setItemToSearch(e.target.value)}>
 						<option value=''>Elegir...</option>
@@ -108,14 +108,14 @@ const Search = () => {
 				</Form.Group>
 			</Form>
 
-			<p className='mt-5 mb-3'>Items encontrados: {n_items}</p>
+			<p className='mt-5 mb-3'>Artículos encontrados: {n_items}</p>
 
 			<Table striped>
 				<tbody>
 					{n_items > 0
 						? items.map((item) => (
 								<tr key={item._id}>
-									<td style={{ width: '150px' }}>Imagen del Item</td>
+									<td style={{ width: '150px' }}>Imagen del Artículo</td>
 									<td>
 										<div>
 											<h5 className='mb-1' style={{ cursor: 'pointer' }} onClick={(e) => goToItem(e, item._id)}>{item.title}</h5>
