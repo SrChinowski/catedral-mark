@@ -1,13 +1,14 @@
 import { AppBanner, AppLayout, CardMenu, MainContainer, Menuitem} from './appMenu.styles';
 import logoImage from '../../../assets/images/logov.png';
 import Logo from '../Logo';
-
 import { appMenuItems } from '../../../assets/data';
 import Text from '../Text';
 import UserDropdown from "./userDropdown"
+import Notification from '../utils/Notification';
 
 const AppMenu = ({component}, page) => {
     const { menuItems } = appMenuItems;
+
     return ( 
         <AppLayout>
             <AppBanner>
@@ -34,6 +35,7 @@ const AppMenu = ({component}, page) => {
             <MainContainer>
                 {component}
             </MainContainer>
+            <Notification />
         </AppLayout>
      );
 }

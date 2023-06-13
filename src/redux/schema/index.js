@@ -3,6 +3,11 @@ export const AppSchema = {
     users_list: [],
     statuses: [],
     errors: {},
+    notification : {
+        show: false,
+        title: "",
+        body : ""
+    },
     roles:[]
 }
 

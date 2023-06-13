@@ -10,6 +10,7 @@ import {
     deleteItemService,
     get_templatesService
 } from "../services/items_d";
+import { open_notification } from "./app_d";
 const PREFIX = 'ITEMS';
 const SET_VALUE = 'SET_VALUE';
 const initialState = {...ItemsSchema};
@@ -73,6 +74,7 @@ export const item_create = (filters = {}, itemInfo = {}) => (dispatch, getState)
     .then((res) => {
         window.location.href = '/app';
         dispatch(postItemCreate.stopFetch())
+        dispatch(open_notification("Articulo creado", "El articulo se guardo correctamente"))
     })
     .catch((e) => {
         dispatch(postItemCreate.stopFetch(false, {error: 'Error al crear Artículo'}))
@@ -110,6 +112,8 @@ export const update_item = (itemId = '', itemMarcId = '', filters = {}, itemInfo
     .then((res) => {
         window.location.href = '/app';
         dispatch(postItemUpdate.stopFetch())
+        dispatch(open_notification("Articulo actualizado", "El articulo se actualizo correctamente"))
+
     })
     .catch((e) => {
         dispatch(postItemUpdate.stopFetch(false, {error: 'Error al actualizar Artículo'}))
@@ -128,6 +132,8 @@ export const delete_item = (itemId = '', filters = {}, setShowDialog = {}, retur
         setShowDialog(false);
 		dispatch(get_all_items(filters));
         dispatch(deleteItem.stopFetch())
+        dispatch(open_notification("Articulo eliminado", "El articulo se elimino correctamente"))
+
 
         if (returnToItems) window.location.href =  '/app';
     })

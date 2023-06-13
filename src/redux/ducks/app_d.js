@@ -41,6 +41,8 @@ export const appLogin = (email, password) => (dispatch, getState) => {
                     token: token
                 },'root'))
 
+                dispatch(open_notification("Info de usuario", "La informacion se descargo correctamente"))
+
                 localStorage.setItem('catedralToken', token)
                 dispatch(appLogin.stopFetch())
             }
@@ -80,6 +82,7 @@ export const deleteUsers = (id = "", setShowDialog) => (dispatch, getState) => {
             setShowDialog(false);
             dispatch(getAllUsers());
             dispatch(deleteUsers.stopFetch())
+            dispatch(open_notification("Usuario eliminado", "El usuario se elimino correctamente"))
         })
         .catch((e) => {
             dispatch(deleteUsers.stopFetch(false, {error: 'Error al elimiar usuario'}))
@@ -99,6 +102,8 @@ export const UpdateUser = (id, userInfo) => (dispatch, getState) => { //ONLY GOD
         .then((r) => {
             console.log(r)
             dispatch(UpdateUser.stopFetch())
+            dispatch(open_notification("Usuario actualizado", "El usuario se actualizo correctamente"))
+
         })
         .catch((e) => {
             dispatch(UpdateUser.stopFetch(false, {error: 'Error al actualizar lista de usuarios'}))
@@ -159,9 +164,11 @@ export const createUser = () => (dispatch, getState) => { //ONLY GOD/ADMIN
         .then(() => {
             dispatch(getAllUsers())
             dispatch(createUser.stopFetch())
+            dispatch(open_notification("Usuario creado", "El usuario se creo correctamente"))
         })
         .catch((e) => {
             dispatch(createUser.stopFetch(false, {error: 'Error al obtener lista de usuarios'}))
+            open_notification("Ups! ", e.response.data.error)
             console.log('[ createUser ]', e.response.data.error)   
         })
 
@@ -220,7 +227,6 @@ export const post_user_register = (user_info = {}, create = false, resetForm)  =
 
     return get_user_signupService(user_info)
         .then((data) => {
-            console.log(data)
             if(data.msg === "Registered user successfully")
             {
                 dispatch(appLogin(user_info.email, user_info.password))
@@ -233,10 +239,51 @@ export const post_user_register = (user_info = {}, create = false, resetForm)  =
             }
         })
         .catch((e) => {
-            dispatch(user_signup.stopFetch(false, {error: 'Error al crear usuario'}))
-            console.log('[ post_user_signup ]', e.response.data.error)   
+            dispatch(user_signup.stopFetch(false, {error: 'Error al crear usuario'}))  
         })
 
+}
+
+export const open_notification = (title , body)  => (dispatch, getState) => {
+    const open_notification = Status({reducer: 'app', status: 'OPEN_NOTIFICATION'});
+
+    dispatch(open_notification.startFetch());
+    console.log("OPEN")
+    try {
+        dispatch(App.setValue('', {
+            notification: {
+                show: true,
+                title: title,
+                body: body
+            }
+        },'root'))
+
+        dispatch(open_notification.stopFetch())
+    } catch (error) {
+        dispatch(open_notification.stopFetch(false, {error: 'Error al crear usuario'}))
+        console.log('[ post_user_signup ]')   
+    }
+}
+
+export const close_notification = ()  => (dispatch, getState) => {
+    const close_notification = Status({reducer: 'app', status: 'CLOSE_NOTIFICATION'});
+
+    dispatch(close_notification.startFetch());
+
+    try {
+        dispatch(App.setValue('', {
+            notification: {
+                show: false,
+                title: "",
+                body: ""
+            }
+        },'root'))
+
+        dispatch(close_notification.stopFetch())
+    } catch (error) {
+        dispatch(close_notification.stopFetch(false, {error: 'Error al crear usuario'}))
+        console.log('[ post_user_signup ]')   
+    }
 }
 
 //Reducer

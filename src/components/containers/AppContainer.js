@@ -28,6 +28,7 @@ const AppContainer = ({component, page, action = "common"}) => {
                 <AppMenu component={component} page={page}/> : 
             <AppMenu component={<Search />} page={"Buscador"}/> 
           }
+          
       </Box> 
      );
 }
